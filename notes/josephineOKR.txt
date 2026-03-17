@@ -1,0 +1,6 @@
+Prototype Deliverables (Objectives and Key Results):
+- player and camera movement -- Tues 3/17 by 5pm (estimate: 1hr)
+- phase through ground -- Weds 3/18 by 11:59pm (estimate: 1hr)
+- pseudocode for enemies -- Thurs 3/19 by 12pm (estimate: 2hr)
+- code cleanup -- Fri 3/20 by 10am (estimate: 2hr)
+- video demo + voiceover -- Fri 3/20 by 11:59pm (estimate: 1hr)
