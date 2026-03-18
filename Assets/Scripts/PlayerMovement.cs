@@ -83,6 +83,43 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Jump!");
         }
         // ===============================================================
+
+
+        // ========== PHASING THROUGH THE FORCE FIELDS ===================
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            var closestObj = findClosestEnergy();
+
+            if (!closestObj) // is null
+                return;
+
+            // closestObj.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
+            GameObject newParticles = Instantiate(particles);
+            newParticles.transform.position = closestObj.transform.position + new Vector3(0,5,0);
+            Debug.Log($"Q pressed! Destroying field at " + closestObj.transform.position);
+            Destroy(closestObj); // remove the force field that is closest to player
+        }
+        // ==============================================================
+    }
+
+    private GameObject findClosestEnergy()
+    {
+        var arr = GameObject.FindGameObjectsWithTag("Tunnelable");
+        var pos = transform.position;
+
+        float dist = 85;
+        GameObject nearest = null;
+        foreach(var go in arr)
+        {
+            var d = (go.transform.position - pos).sqrMagnitude; 
+            if (d < dist)
+            {
+                nearest = go;
+                dist = d;
+            }
+        }
+
+        return nearest;
     }
 
     void OnCollisionEnter(Collision coll)
