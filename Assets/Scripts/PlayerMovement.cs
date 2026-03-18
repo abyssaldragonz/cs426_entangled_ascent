@@ -1,0 +1,103 @@
+using UnityEngine;
+using System.Collections;
+using UnityEngine.InputSystem;
+using System.Collections.Generic;
+
+public class PlayerMovement : MonoBehaviour
+{
+    public float speed = 2f;
+
+
+    [SerializeField] private AudioListener audioListener;
+    [SerializeField] private Camera playerCamera;
+    [SerializeField] private GameObject particles;
+
+
+    // public float rotationSpeed = 90;
+    public float force = 700f;
+
+    // keep track of camera rotation
+    private float pitch = 0.0f;
+    private float yaw = 0.0f;
+
+
+    Rigidbody rb;
+    Transform t;
+    
+
+    // Lives and game state tracking
+    int catLives = 9;
+    private bool isGrounded;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        t = GetComponent<Transform>();
+        isGrounded = false;
+        Debug.Log("STARTING PLAYER.");
+    }
+
+    void Update()
+    {
+        // ========== Key Movements =====================================
+        if (Input.GetKey(KeyCode.W))
+        {
+            rb.linearVelocity += this.transform.forward * speed * Time.deltaTime;
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            rb.linearVelocity -= this.transform.forward * speed * Time.deltaTime;
+        }
+
+        if (Input.GetKey(KeyCode.A))
+        {
+            // t.rotation *= Quaternion.Euler(0, -rotationSpeed * Time.deltaTime, 0);
+            rb.linearVelocity -= this.transform.right * speed * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.D))
+        {
+            // t.rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime, 0);
+            rb.linearVelocity += this.transform.right * speed * Time.deltaTime;
+        }
+        // ===============================================================
+
+
+        // ========== Camera Rotation ====================================
+        Cursor.lockState = CursorLockMode.Locked;
+        pitch += 5f * Input.GetAxis("Mouse X");
+        yaw -= 5f * Input.GetAxis("Mouse Y");
+         if (yaw < -15)
+            yaw = -15;
+        if (yaw > 55)
+            yaw = 55;
+        transform.eulerAngles = new Vector3(yaw, pitch, 0.0f); // rotate player horizontally
+        // playerCamera.transform.eulerAngles = new Vector3(yaw, playerCamera.transform.eulerAngles.y, playerCamera.transform.eulerAngles.z); // rotate camera vertically
+        // playerCamera.transform.RotateAround(transform.position, Vector3.up, h * Time.deltaTime);
+        // ===============================================================
+
+
+        // ========== Jump with SPACE ====================================
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            rb.AddForce(Vector3.up * 15f, ForceMode.Impulse);
+            Debug.Log("Jump!");
+        }
+        // ===============================================================
+    }
+
+    void OnCollisionEnter(Collision coll)
+    {
+        if(coll.gameObject.tag == "Floor")
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionExit(Collision coll)
+    {
+        if(coll.gameObject.tag == "Floor")
+        {
+            isGrounded = false;
+        }
+    }
+}
