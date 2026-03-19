@@ -5,10 +5,11 @@ TagManager:
   serializedVersion: 3
   tags:
   - Floor
-  - Phasable
   - BinaryBug
   - DustBunny
   - VacuumSentry
+  - Phasable_Ground
+  - Tunnelable_Wall
   layers:
   - Default
   - TransparentFX

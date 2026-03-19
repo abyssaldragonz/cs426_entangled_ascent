@@ -1,3 +1,6 @@
+using System;
+using System.Xml.Serialization;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class VacuumSentry : MonoBehaviour
@@ -13,4 +16,23 @@ public class VacuumSentry : MonoBehaviour
     {
         
     }
+
+    // ========== Observed Player ========================================
+    private void OnTriggerEnter(Collider other) {
+        if (other.gameObject.tag == "Player") {
+            int sentryChoice = UnityEngine.Random.Range(0,1); 
+            Debug.Log("Player observed by sentry! Choosing option: " + sentryChoice);
+
+            switch (sentryChoice) {
+                case 0: // freeze player
+                    // to be implemented
+                    break;
+
+                case 1: // phase through the ground to previous floor
+                    // to be implemented
+                    break;
+            }
+        }
+    }
+
 }
