@@ -2,19 +2,21 @@ using UnityEngine;
 using System.Collections;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using TMPro;
+using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 2f;
-
-
     [SerializeField] private AudioListener audioListener;
     [SerializeField] private Camera playerCamera;
     [SerializeField] private GameObject particles;
+    [SerializeField] private TextMeshProUGUI livesPanel;
 
 
     // public float rotationSpeed = 90;
     public float force = 700f;
+    public float speed = 2f;
+
 
     // keep track of camera rotation
     private float pitch = 0.0f;
@@ -63,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         // ========== Camera Rotation ====================================
-        Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         pitch += 5f * Input.GetAxis("Mouse X");
         yaw -= 5f * Input.GetAxis("Mouse Y");
          if (yaw < -15)
@@ -102,6 +104,7 @@ public class PlayerMovement : MonoBehaviour
         // ==============================================================
     }
 
+    // ========== HELPER FUNCTION FOR PHASING ===========================
     private GameObject findClosestEnergy()
     {
         var arr = GameObject.FindGameObjectsWithTag("Tunnelable");
@@ -120,6 +123,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         return nearest;
+    }
+
+    // ========== FUNCTION FOR LOSING LIFE ==============================
+    public void LoseLife()
+    {
+        catLives--;
+        livesPanel.text = "Lives Left: " + catLives;
     }
 
     void OnCollisionEnter(Collision coll)
