@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     private int catLives = 9;
     private bool isGrounded;
     
-    private const float force = 1000f;
+    private const float force = 1500f;
     private const float speed = 10f;
 
     void Start()
