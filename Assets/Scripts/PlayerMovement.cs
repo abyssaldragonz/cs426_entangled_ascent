@@ -31,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
     private int catLives = 9;
     private bool isGrounded;
     
-    private const float force = 750f;
-    private const float speed = 5f;
+    private const float force = 1000f;
+    private const float speed = 10f;
 
     void Start()
     {
@@ -50,30 +50,30 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Keyboard.current != null) {
             // ========== Key Movements ======================================
+            Vector3 moveDir = Vector3.zero;
+
             if (Keyboard.current.wKey.isPressed)
-            {
-                rb.linearVelocity += this.transform.forward * speed * Time.deltaTime;
-            }
-            else if (Keyboard.current.sKey.isPressed)
-            {
-                rb.linearVelocity -= this.transform.forward * speed * Time.deltaTime;
-            }
+                moveDir += transform.forward;
+
+            if (Keyboard.current.sKey.isPressed)
+                moveDir -= transform.forward;
 
             if (Keyboard.current.aKey.isPressed)
-            {
-                // t.rotation *= Quaternion.Euler(0, -rotationSpeed * Time.deltaTime, 0);
-                rb.linearVelocity -= this.transform.right * speed * Time.deltaTime;
-            }
+                moveDir -= transform.right;
+
             if (Keyboard.current.dKey.isPressed)
-            {
-                // t.rotation *= Quaternion.Euler(0, rotationSpeed * Time.deltaTime, 0);
-                rb.linearVelocity += this.transform.right * speed * Time.deltaTime;
-            }
+                moveDir += transform.right;
+
+            moveDir = moveDir.normalized;
+
+            Vector3 currentVel = rb.linearVelocity;
+            // Calculate movement direction from WASD input and directly set Rigidbody velocity
+            rb.linearVelocity = new Vector3(moveDir.x * speed, currentVel.y, moveDir.z * speed);
             // ===============================================================
 
 
             // ========== Jump with SPACE ====================================
-            if (isGrounded && Keyboard.current.spaceKey.isPressed)
+            if (isGrounded && Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 rb.AddForce(Vector3.up * force * Time.deltaTime, ForceMode.Impulse);
                 Debug.Log("Jump!");
