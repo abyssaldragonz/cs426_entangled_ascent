@@ -117,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
         var arr = GameObject.FindGameObjectsWithTag("Tunnelable_Wall");
         var pos = transform.position;
 
-        float dist = 100;
+        float dist = 150;
         GameObject nearest = null;
         foreach(var go in arr)
         {

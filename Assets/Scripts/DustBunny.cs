@@ -13,4 +13,12 @@ public class DustBunny : MonoBehaviour
     {
         
     }
+
+    // ========== Collided with Player ===================================
+    private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "Player") {
+            Debug.Log("Dust Bunny caught the player!");
+            other.gameObject.GetComponent<PlayerMovement>().LoseLife();
+        }
+    }
 }

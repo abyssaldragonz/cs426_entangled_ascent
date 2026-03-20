@@ -20,7 +20,7 @@ public class VacuumSentry : MonoBehaviour
     // ========== Observed Player ========================================
     private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player") {
-            int sentryChoice = UnityEngine.Random.Range(0,1); 
+            int sentryChoice = UnityEngine.Random.Range(0,2); 
             Debug.Log("Player observed by sentry! Choosing option: " + sentryChoice);
 
             switch (sentryChoice) {
