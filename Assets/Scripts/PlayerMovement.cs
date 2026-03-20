@@ -82,7 +82,7 @@ public class PlayerMovement : MonoBehaviour
 
 
             // ========== PHASING THROUGH THE FORCE FIELDS ===================
-            else if (Keyboard.current.qKey.isPressed)
+            else if (Keyboard.current.qKey.wasPressedThisFrame)
             {
                 var closestObj = findClosestEnergy();
 
