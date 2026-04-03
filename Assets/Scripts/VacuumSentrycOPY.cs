@@ -11,14 +11,14 @@ using System.Runtime.CompilerServices;
 // BUT MAY BE RELEVANT TO FUTURE IMPLEMENTATION OF THE SENTRY'S ABILITIES.
 // THEY ARE LEFT IN AS A REFERENCE FOR HOW THE SENTRY'S COMBAT BEHAVIOR MIGHT WORK IN THE FUTURE.
 
-public class VacuumSentry : MonoBehaviour
+public class VacuumSentryCopy: MonoBehaviour
 {
 
     [Header("References")]
     [SerializeField] private NavMeshAgent navAgent;
     [SerializeField] private Transform playerTransform;
-    //[SerializeField] private Transform firePoint;
-    //[SerializeField] private GameObject projectilePrefab;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject projectilePrefab;
 
     [Header ("Layers")]
     [SerializeField] private LayerMask terrainLayer;
@@ -30,10 +30,10 @@ public class VacuumSentry : MonoBehaviour
     private bool haspatrolPoint;
 
     [Header("Combat Settings")]
-    //[SerializeField] private float attackCooldown=1f;
-    //private bool isOnAttackCooldown;
-    //[SerializeField] private float forwardShotForce = 10f;
-    //[SerializeField] private float verticalShotForce = 5f;
+    [SerializeField] private float attackCooldown=1f;
+    private bool isOnAttackCooldown;
+    [SerializeField] private float forwardShotForce = 10f;
+    [SerializeField] private float verticalShotForce = 5f;
 
     [Header("Detection Ranges")]
     [SerializeField] private float visionRange = 20f;
@@ -88,17 +88,16 @@ public class VacuumSentry : MonoBehaviour
         isPlayerInRange = Physics.CheckSphere(transform.position, engagementRange, playerLayerMask);
     }
 
-   // private void FireProjectile()
-   // {
-//if (projectilePrefab == null || firePoint == null) return;
+   private void FireProjectile()
+   {
+if (projectilePrefab == null || firePoint == null) return;
         
-        // Instantiate projectile and apply f
-      //  Rigidbody projectileRb = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity).GetComponent<Rigidbody>();
-    //    projectileRb.AddForce(transform.forward * forwardShotForce, ForceMode.Impulse);
-  //      projectileRb.AddForce(transform.up * verticalShotForce, ForceMode.Impulse);
-//
-      //  Destroy(projectileRb.gameObject, 3f);
-    //}
+        // Instantiate the projectile and apply forces to it
+       Rigidbody projectileRb = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity).GetComponent<Rigidbody>();
+       projectileRb.AddForce(transform.forward * forwardShotForce, ForceMode.Impulse);
+       projectileRb.AddForce(transform.up * verticalShotForce, ForceMode.Impulse);
+       Destroy(projectileRb.gameObject, 3f);
+    }
 
     private void FindPatrolPoint()
     {
@@ -114,12 +113,12 @@ public class VacuumSentry : MonoBehaviour
         }
     }
 
-    //private IEnumerator AttackcooldownRoutine()
-    //{
-      //  isOnAttackCooldown = true;
-        //yield return new WaitForSeconds(attackCooldown);
-        //isOnAttackCooldown = false;
-    //}
+    private IEnumerator AttackcooldownRoutine()
+    {
+     isOnAttackCooldown = true;
+        yield return new WaitForSeconds(attackCooldown);
+        isOnAttackCooldown = false;
+    }
 
     private void PerformPatrol()
     {
@@ -140,21 +139,21 @@ public class VacuumSentry : MonoBehaviour
             navAgent.SetDestination(playerTransform.position);
     }
 
-    //private void PerformAttack()
-    //{
-      // navAgent.SetDestination(transform.position);
+    private void PerformAttack()
+    {
+      navAgent.SetDestination(transform.position);
 
-       //if(playerTransform != null)
-       //{
-        //transform.LookAt(playerTransform);
-       //}
+       if(playerTransform != null)
+       {
+        transform.LookAt(playerTransform);
+       }
 
-      // if(!isOnAttackCooldown)
-      // {
-       // FireProjectile();
-        //StartCoroutine(AttackcooldownRoutine());
-       //}
-    //}
+       if(!isOnAttackCooldown)
+       {
+       FireProjectile();
+        StartCoroutine(AttackcooldownRoutine());
+       }
+    }
 
        private void UpdateBehaviourState()
         {
@@ -168,30 +167,19 @@ public class VacuumSentry : MonoBehaviour
             PerformChase();
         }
 
-      //  else if (isPlayerVisible && isPlayerInRange)
+       else if (isPlayerVisible && isPlayerInRange)
         //{
-          //  PerformAttack();
-       // }
-
+            PerformAttack();
+        }
+private void OnCollisionEnter(Collision other) {
+        if (other.gameObject.tag == "Player") {
+            Debug.Log("Vacuum Sentry hit the player!");
+            other.gameObject.GetComponent<PlayerMovement>().LoseLife();
+        }
+    }
     }
 
 
 
  // ========== Observed Player ========================================
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player") {
-            int sentryChoice = UnityEngine.Random.Range(0,2); 
-            Debug.Log("Player observed by sentry! Choosing option: " + sentryChoice);
-
-            switch (sentryChoice) {
-                case 0: // freeze player
-                    // to be implemented
-                    break;
-
-                case 1: // phase through the ground to previous floor
-                    // to be implemented
-                    break;
-            }
-        }
-    }
-}
+  
