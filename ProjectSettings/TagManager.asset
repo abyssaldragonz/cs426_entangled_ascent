@@ -12,6 +12,7 @@ TagManager:
   - Tunnelable_Wall
   - EnergyOrb
   - Yarnball
+  - Bouncy
   layers:
   - Default
   - TransparentFX

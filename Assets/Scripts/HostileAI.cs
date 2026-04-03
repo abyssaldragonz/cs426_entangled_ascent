@@ -56,7 +56,7 @@ public class HostileAI : MonoBehaviour
             navAgent = GetComponent<NavMeshAgent>();
         }
     }  
-        private void Update()
+    private void Update()
     {
         DetectPlayer();
         UpdateBehaviourState();
@@ -85,7 +85,7 @@ public class HostileAI : MonoBehaviour
 
     private void FireProjectile()
     {
-if (projectilePrefab == null || firePoint == null) return;
+        if (projectilePrefab == null || firePoint == null) return;
         
         // Instantiate projectile and apply f
         Rigidbody projectileRb = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity).GetComponent<Rigidbody>();
@@ -127,7 +127,7 @@ if (projectilePrefab == null || firePoint == null) return;
             haspatrolPoint = false;
     
     }
-IEnumerator HopRoutine()
+    IEnumerator HopRoutine()
     {
         while (true)
         {
@@ -136,13 +136,14 @@ IEnumerator HopRoutine()
             yield return new WaitForSeconds(hopInterval);
         }
     }
+
     IEnumerator PerformPatrolRoutine() {
-    while (true) 
-    {
-        
-       HopRoutine();    
+        while (true) 
+        {
+            
+        HopRoutine();    
+        }
     }
-     }
 
 
 
@@ -168,9 +169,9 @@ IEnumerator HopRoutine()
        }
     }
 
-       private void UpdateBehaviourState()
-        {
-           if(!isPlayerVisible && !isPlayerInRange)
+    private void UpdateBehaviourState()
+    {
+        if(!isPlayerVisible && !isPlayerInRange)
         {
             PerformPatrol();
         }
@@ -186,7 +187,5 @@ IEnumerator HopRoutine()
         }
 
     }
-
-
 
 }
