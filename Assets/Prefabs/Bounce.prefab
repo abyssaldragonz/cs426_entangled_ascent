@@ -29,15 +29,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8307389226687553952}
   serializedVersion: 2
-<<<<<<< HEAD:Assets/Prefabs/Vac Sentry Beam.prefab
-  m_LocalRotation: {x: 0.53304964, y: 0.4992556, z: 0.49855742, w: 0.4669501}
-  m_LocalPosition: {x: 17.39, y: 2.9874, z: 1.8005}
-  m_LocalScale: {x: 0.38319352, y: 0.514244, z: 0.36231866}
-=======
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -28.11, y: 15.799999, z: 10.9496}
   m_LocalScale: {x: 20, y: 5, z: 20}
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226:Assets/Prefabs/Bounce.prefab
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}

@@ -179,14 +179,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -206,7 +198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 11754823}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: dust bunnies
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,65 +285,9 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: -5410771954944517980, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -5410771954944517980, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: -3592420646564268378, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -3592420646564268378, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 105563573110003780, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 105563573110003780, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
       propertyPath: m_Name
       value: danger_sign
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 1243489144557883220, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1243489144557883220, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628163343840744996, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4628163343840744996, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039888009070741781, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5039888009070741781, guid: 182026cddbd674a4da56a6a2ed68ce4c, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -497,12 +433,12 @@ GameObject:
   - component: {fileID: 19126677}
   - component: {fileID: 19126676}
   - component: {fileID: 19126675}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &19126674
 Transform:
@@ -608,14 +544,6 @@ PrefabInstance:
     - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_Name
       value: Sphere (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5442196290141285557, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_LocalScale.x
@@ -735,14 +663,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -762,7 +682,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 47101232}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: FLOOR ONE
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -804,7 +724,7 @@ GameObject:
   - component: {fileID: 49420415}
   - component: {fileID: 49420414}
   - component: {fileID: 49420413}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -915,12 +835,12 @@ GameObject:
   - component: {fileID: 50587722}
   - component: {fileID: 50587724}
   - component: {fileID: 50587723}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: RawImage (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &50587722
 RectTransform:
@@ -987,12 +907,12 @@ GameObject:
   - component: {fileID: 67592738}
   - component: {fileID: 67592740}
   - component: {fileID: 67592739}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: RawImage (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &67592738
 RectTransform:
@@ -1172,7 +1092,7 @@ GameObject:
   - component: {fileID: 86333056}
   - component: {fileID: 86333055}
   - component: {fileID: 86333054}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -1324,14 +1244,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (20)
       objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1424,7 +1336,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &105496328
 Transform:
@@ -1571,14 +1483,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (18)
       objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1601,12 +1505,12 @@ GameObject:
   - component: {fileID: 116787842}
   - component: {fileID: 116787841}
   - component: {fileID: 116787840}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &116787839
 Transform:
@@ -2038,14 +1942,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TunnelableWall
       objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2151,12 +2047,12 @@ GameObject:
   - component: {fileID: 211854597}
   - component: {fileID: 211854599}
   - component: {fileID: 211854598}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &211854597
 RectTransform:
@@ -2224,7 +2120,7 @@ GameObject:
   - component: {fileID: 215246157}
   - component: {fileID: 215246156}
   - component: {fileID: 215246155}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2341,7 +2237,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &218858029
 Transform:
@@ -2617,7 +2513,7 @@ GameObject:
   - component: {fileID: 248086532}
   - component: {fileID: 248086531}
   - component: {fileID: 248086530}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2726,7 +2622,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 262109739}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: tunnelable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2882,14 +2778,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2960,14 +2848,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2990,7 +2870,7 @@ GameObject:
   - component: {fileID: 289818180}
   - component: {fileID: 289818179}
   - component: {fileID: 289818178}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -3102,7 +2982,7 @@ GameObject:
   - component: {fileID: 290871232}
   - component: {fileID: 290871231}
   - component: {fileID: 290871230}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3215,12 +3095,12 @@ GameObject:
   - component: {fileID: 321672191}
   - component: {fileID: 321672193}
   - component: {fileID: 321672192}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &321672191
 RectTransform:
@@ -3495,14 +3375,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3513,87 +3385,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
   m_PrefabInstance: {fileID: 333985631}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
---- !u!1001 &342592345
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 932159948}
-    m_Modifications:
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -4.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 15.46
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 224.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Name
-      value: Parkour (11)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6216314d756b7254685e166928769fbd, type: 3}
---- !u!4 &342592346 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-  m_PrefabInstance: {fileID: 342592345}
-  m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
 --- !u!1 &365280214
 GameObject:
   m_ObjectHideFlags: 0
@@ -3605,12 +3396,12 @@ GameObject:
   - component: {fileID: 365280215}
   - component: {fileID: 365280217}
   - component: {fileID: 365280216}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: RawImage (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &365280215
 RectTransform:
@@ -3678,12 +3469,12 @@ GameObject:
   - component: {fileID: 374069521}
   - component: {fileID: 374069520}
   - component: {fileID: 374069519}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &374069518
 Transform:
@@ -3830,14 +3621,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bounce (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3908,14 +3691,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (19)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3937,14 +3712,6 @@ PrefabInstance:
     - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_Name
       value: Sphere (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5442196290141285557, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_LocalScale.x
@@ -4134,14 +3901,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4163,12 +3922,12 @@ GameObject:
   - component: {fileID: 408588484}
   - component: {fileID: 408588486}
   - component: {fileID: 408588485}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &408588484
 RectTransform:
@@ -4671,7 +4430,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &445182686
 Transform:
@@ -4779,12 +4538,12 @@ GameObject:
   - component: {fileID: 449470563}
   - component: {fileID: 449470562}
   - component: {fileID: 449470561}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &449470560
 Transform:
@@ -4879,87 +4638,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449470559}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
---- !u!1001 &452525133
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 983418106}
-    m_Modifications:
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 65.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 135.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 156
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Name
-      value: Parkour (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6216314d756b7254685e166928769fbd, type: 3}
---- !u!4 &452525134 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-  m_PrefabInstance: {fileID: 452525133}
-  m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
 --- !u!1 &459413338
 GameObject:
   m_ObjectHideFlags: 0
@@ -5161,14 +4839,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5352,14 +5022,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (18)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5382,7 +5044,7 @@ GameObject:
   - component: {fileID: 496454610}
   - component: {fileID: 496454609}
   - component: {fileID: 496454608}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5793,7 +5455,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &521930528
 Transform:
@@ -5905,7 +5567,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &523590795
 Transform:
@@ -6012,12 +5674,12 @@ GameObject:
   - component: {fileID: 525941406}
   - component: {fileID: 525941405}
   - component: {fileID: 525941404}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cylinder (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &525941403
 Transform:
@@ -6126,12 +5788,12 @@ GameObject:
   - component: {fileID: 526222031}
   - component: {fileID: 526222030}
   - component: {fileID: 526222029}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &526222028
 Transform:
@@ -6235,12 +5897,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 527660036}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: 'energy orbs '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &527660036
 Transform:
@@ -6276,12 +5938,12 @@ GameObject:
   - component: {fileID: 540210594}
   - component: {fileID: 540210593}
   - component: {fileID: 540210592}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &540210591
 Transform:
@@ -6464,12 +6126,12 @@ GameObject:
   - component: {fileID: 544838674}
   - component: {fileID: 544838676}
   - component: {fileID: 544838675}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: RawImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &544838674
 RectTransform:
@@ -6776,14 +6438,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6980,12 +6634,12 @@ GameObject:
   - component: {fileID: 580673249}
   - component: {fileID: 580673248}
   - component: {fileID: 580673247}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &580673246
 Transform:
@@ -7412,7 +7066,7 @@ GameObject:
   - component: {fileID: 631040724}
   - component: {fileID: 631040723}
   - component: {fileID: 631040722}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7684,14 +7338,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7832,14 +7478,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7910,14 +7548,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7939,12 +7569,12 @@ GameObject:
   - component: {fileID: 659950915}
   - component: {fileID: 659950917}
   - component: {fileID: 659950916}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: RawImage (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &659950915
 RectTransform:
@@ -8052,14 +7682,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8157,12 +7779,12 @@ GameObject:
   - component: {fileID: 685561143}
   - component: {fileID: 685561142}
   - component: {fileID: 685561141}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &685561140
 Transform:
@@ -8271,16 +7893,12 @@ GameObject:
   - component: {fileID: 688872894}
   - component: {fileID: 688872893}
   - component: {fileID: 688872892}
-<<<<<<< HEAD
-  - component: {fileID: 688872895}
-=======
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
   m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &688872891
 Transform:
@@ -8375,38 +7993,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 688872890}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &688872895
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 688872890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.AI.Navigation::Unity.AI.Navigation.NavMeshSurface
-  m_SerializedVersion: 0
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.61333334
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 692225e1126904b4fa86f103b6600edc, type: 2}
-  m_BuildHeightMesh: 0
 --- !u!1 &692811274
 GameObject:
   m_ObjectHideFlags: 0
@@ -8604,14 +8190,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8634,7 +8212,7 @@ GameObject:
   - component: {fileID: 706136932}
   - component: {fileID: 706136931}
   - component: {fileID: 706136930}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8861,14 +8439,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -8961,12 +8531,12 @@ GameObject:
   - component: {fileID: 767682339}
   - component: {fileID: 767682338}
   - component: {fileID: 767682337}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &767682336
 Transform:
@@ -9135,7 +8705,7 @@ GameObject:
   - component: {fileID: 775678504}
   - component: {fileID: 775678503}
   - component: {fileID: 775678502}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9295,14 +8865,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9439,12 +9001,12 @@ GameObject:
   - component: {fileID: 790190171}
   - component: {fileID: 790190170}
   - component: {fileID: 790190169}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &790190168
 Transform:
@@ -9556,7 +9118,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &796373834
 Transform:
@@ -9660,12 +9222,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 797276355}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: phasable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &797276355
 Transform:
@@ -9808,12 +9370,12 @@ GameObject:
   - component: {fileID: 804994271}
   - component: {fileID: 804994270}
   - component: {fileID: 804994269}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &804994268
 Transform:
@@ -10386,12 +9948,12 @@ GameObject:
   - component: {fileID: 856280879}
   - component: {fileID: 856280881}
   - component: {fileID: 856280880}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: RawImage (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &856280879
 RectTransform:
@@ -10646,7 +10208,7 @@ GameObject:
   - component: {fileID: 862890519}
   - component: {fileID: 862890518}
   - component: {fileID: 862890517}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11127,7 +10689,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &895310502
 Transform:
@@ -11233,14 +10795,6 @@ PrefabInstance:
     - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_Name
       value: Sphere (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5442196290141285557, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_LocalScale.x
@@ -11428,12 +10982,12 @@ GameObject:
   - component: {fileID: 914355641}
   - component: {fileID: 914355640}
   - component: {fileID: 914355639}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &914355638
 Transform:
@@ -11715,7 +11269,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 932159948}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: ParkourPlatforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11757,12 +11311,8 @@ Transform:
   - {fileID: 1987492292}
   - {fileID: 660443085}
   - {fileID: 3793760549787347713}
-<<<<<<< HEAD
-  - {fileID: 2025502991}
-=======
   - {fileID: 1053703434}
   - {fileID: 1544415458}
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
   m_Father: {fileID: 47101232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &935218951
@@ -12190,14 +11740,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12268,14 +11810,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (19)
       objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12303,7 +11837,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &966497355
 Transform:
@@ -12410,7 +11944,7 @@ GameObject:
   - component: {fileID: 969005237}
   - component: {fileID: 969005236}
   - component: {fileID: 969005235}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12519,7 +12053,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 972283657}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: energy orbs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12666,12 +12200,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 983418106}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: parkour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &983418106
 Transform:
@@ -12769,14 +12303,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (14)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12846,14 +12372,6 @@ PrefabInstance:
     - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
       propertyPath: m_Name
       value: Parkour (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -13903,14 +13421,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (15)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13981,14 +13491,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -14011,7 +13513,7 @@ GameObject:
   - component: {fileID: 1128684183}
   - component: {fileID: 1128684182}
   - component: {fileID: 1128684181}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -14236,14 +13738,6 @@ PrefabInstance:
     - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
       propertyPath: m_Name
       value: Parkour (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -14568,12 +14062,12 @@ GameObject:
   - component: {fileID: 1194854448}
   - component: {fileID: 1194854447}
   - component: {fileID: 1194854446}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1194854445
 Transform:
@@ -14681,7 +14175,7 @@ GameObject:
   - component: {fileID: 1202598154}
   - component: {fileID: 1202598153}
   - component: {fileID: 1202598152}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14790,12 +14284,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1207671110}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1207671110
 Transform:
@@ -14851,7 +14345,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1208823744
 Transform:
@@ -15075,14 +14569,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15222,7 +14708,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1241941999
 Transform:
@@ -15326,7 +14812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1256029961}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: binary bugs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15540,14 +15026,6 @@ PrefabInstance:
     - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
       propertyPath: m_Name
       value: Parkour (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15888,7 +15366,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1333130709}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: vacuum sentries
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16045,8 +15523,8 @@ Transform:
   m_GameObject: {fileID: 1357530039}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.2, y: 100.85, z: -13.92}
-  m_LocalScale: {x: 4.996092, y: 4.996092, z: 4.996092}
+  m_LocalPosition: {x: -22.2, y: 22.4, z: -13.92}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -16062,20 +15540,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e342d20b7454dd043add762dda06e206, type: 3}
   m_Name: 
-<<<<<<< HEAD
-  m_EditorClassIdentifier: Assembly-CSharp::binarybugg
-  navAgent: {fileID: 1357530046}
-  playerTransform: {fileID: 171205579}
-  terrainLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  patrolRadius: 20.06
-  visionRange: 67
-  engagementRange: 16.7
-=======
   m_EditorClassIdentifier: Assembly-CSharp::DustBunny
 --- !u!1 &1363785247
 GameObject:
@@ -16096,14 +15560,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
 --- !u!4 &1363785248
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368133347}
+  m_GameObject: {fileID: 1363785247}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 9.51, y: 5.28, z: 3.68}
@@ -16118,7 +15581,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368133347}
+  m_GameObject: {fileID: 1363785247}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -16139,7 +15602,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368133347}
+  m_GameObject: {fileID: 1363785247}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -16188,89 +15651,9 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368133347}
+  m_GameObject: {fileID: 1363785247}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
---- !u!1 &1368133347
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1363785248}
-  - component: {fileID: 1363785251}
-  - component: {fileID: 1363785250}
-  - component: {fileID: 1363785249}
-  m_Layer: 6
-  m_Name: Cube (11)
-  m_TagString: Floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
-  m_IsActive: 1
---- !u!1001 &1373525145
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1047218205}
-    m_Modifications:
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 21.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 15.319977
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -71.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Name
-      value: Parkour
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6216314d756b7254685e166928769fbd, type: 3}
---- !u!4 &1373525146 stripped
-=======
 --- !u!4 &1387225489 stripped
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
 Transform:
   m_CorrespondingSourceObject: {fileID: 4509560183708430049, guid: 82b9a7f4a9e18854d82237f78d7cdab8, type: 3}
   m_PrefabInstance: {fileID: 102289316}
@@ -16292,7 +15675,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1388106258
 Transform:
@@ -16565,7 +15948,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1401534572
 Transform:
@@ -16721,14 +16104,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16799,14 +16174,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16829,12 +16196,12 @@ GameObject:
   - component: {fileID: 1421119781}
   - component: {fileID: 1421119780}
   - component: {fileID: 1421119779}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1421119778
 Transform:
@@ -16989,14 +16356,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (20)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17024,7 +16383,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1425519538
 Transform:
@@ -17370,14 +16729,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17400,7 +16751,7 @@ GameObject:
   - component: {fileID: 1476065229}
   - component: {fileID: 1476065228}
   - component: {fileID: 1476065227}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17581,7 +16932,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1481521953}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: base walls
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17618,7 +16969,6 @@ Transform:
   - {fileID: 2022810208}
   - {fileID: 1476065226}
   - {fileID: 290871229}
-  - {fileID: 2092165453}
   m_Father: {fileID: 47101232}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1482058599
@@ -17733,87 +17083,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1482058599}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
---- !u!1001 &1499303843
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 983418106}
-    m_Modifications:
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 50.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 133.81
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 159.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Name
-      value: Parkour (18)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6216314d756b7254685e166928769fbd, type: 3}
---- !u!4 &1499303844 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
-  m_PrefabInstance: {fileID: 1499303843}
-  m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
 --- !u!1 &1499805048
 GameObject:
   m_ObjectHideFlags: 0
@@ -17831,7 +17100,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1499805049
 Transform:
@@ -17938,12 +17207,12 @@ GameObject:
   - component: {fileID: 1501377741}
   - component: {fileID: 1501377740}
   - component: {fileID: 1501377739}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1501377738
 Transform:
@@ -18099,14 +17368,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: TunnelableWall (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -18129,7 +17390,7 @@ GameObject:
   - component: {fileID: 1513001258}
   - component: {fileID: 1513001257}
   - component: {fileID: 1513001256}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (12)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -18308,7 +17569,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1520578024
 Transform:
@@ -18423,121 +17684,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1520578023}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
---- !u!1 &1523519126
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1523519127}
-  - component: {fileID: 1523519130}
-  - component: {fileID: 1523519129}
-  - component: {fileID: 1523519128}
-  m_Layer: 6
-  m_Name: Cube (8)
-  m_TagString: Floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1523519127
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523519126}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -165.70999, y: 4.6, z: 80.149605}
-  m_LocalScale: {x: 10, y: 5, z: 10}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 932159948}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1523519128
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523519126}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1523519129
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523519126}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 2333ca9a8e321434e9f1749651bf089d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1523519130
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523519126}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
-=======
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
 --- !u!1 &1526292499
 GameObject:
   m_ObjectHideFlags: 0
@@ -18550,12 +17696,12 @@ GameObject:
   - component: {fileID: 1526292503}
   - component: {fileID: 1526292502}
   - component: {fileID: 1526292501}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1526292500
 Transform:
@@ -18662,12 +17808,12 @@ GameObject:
   - component: {fileID: 1540786040}
   - component: {fileID: 1540786039}
   - component: {fileID: 1540786038}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1540786037
 Transform:
@@ -18844,14 +17990,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sphere
       objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     - target: {fileID: 5442196290141285557, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_LocalScale.x
       value: 3
@@ -18930,7 +18068,7 @@ GameObject:
   - component: {fileID: 1560701478}
   - component: {fileID: 1560701477}
   - component: {fileID: 1560701476}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19047,7 +18185,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1564022257
 Transform:
@@ -19154,12 +18292,12 @@ GameObject:
   - component: {fileID: 1576864390}
   - component: {fileID: 1576864389}
   - component: {fileID: 1576864388}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1576864387
 Transform:
@@ -19399,12 +18537,12 @@ GameObject:
   - component: {fileID: 1614884542}
   - component: {fileID: 1614884541}
   - component: {fileID: 1614884540}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cylinder (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1614884539
 Transform:
@@ -19548,12 +18686,12 @@ GameObject:
   - component: {fileID: 1660550229}
   - component: {fileID: 1660550228}
   - component: {fileID: 1660550227}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1660550226
 Transform:
@@ -19778,7 +18916,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1683758497
 Transform:
@@ -20066,12 +19204,12 @@ GameObject:
   - component: {fileID: 1700103643}
   - component: {fileID: 1700103645}
   - component: {fileID: 1700103644}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: RawImage (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &1700103643
 RectTransform:
@@ -20138,14 +19276,6 @@ PrefabInstance:
     - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_Name
       value: Sphere (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 5442196290141285557, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_LocalScale.x
@@ -20479,7 +19609,7 @@ GameObject:
   m_TagString: Floor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1726757200
 Transform:
@@ -20944,13 +20074,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1757812759}
-  - component: {fileID: 1757812760}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: FLOOR TWO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1757812759
 Transform:
@@ -21377,7 +20506,7 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.61333334
+  m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 1b590589d67114b48a82f59a25f9ec6a, type: 2}
   m_BuildHeightMesh: 0
@@ -21411,7 +20540,7 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850889211}
+  m_GameObject: {fileID: 1857352607}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0913, y: 1.09, z: -0.197}
@@ -21426,7 +20555,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850889211}
+  m_GameObject: {fileID: 1857352607}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -21447,7 +20576,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850889211}
+  m_GameObject: {fileID: 1857352607}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -21496,7 +20625,7 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1850889211}
+  m_GameObject: {fileID: 1857352607}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1860598929
 GameObject:
@@ -21622,12 +20751,12 @@ GameObject:
   - component: {fileID: 1867819007}
   - component: {fileID: 1867819006}
   - component: {fileID: 1867819005}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1867819004
 Transform:
@@ -21852,14 +20981,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21930,14 +21051,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (15)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22007,14 +21120,6 @@ PrefabInstance:
     - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
       propertyPath: m_Name
       value: Parkour (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22375,63 +21480,12 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
-<<<<<<< HEAD
---- !u!195 &1929611171
-NavMeshAgent:
-=======
 --- !u!1 &1930170189
 GameObject:
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1929611164}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5000001
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &1929611172
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1929611164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9661b46b56fcf8e4695c00637193ca48, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VacuumSentryCopy
-  navAgent: {fileID: 1929611171}
-  playerTransform: {fileID: 171205579}
-  firePoint: {fileID: 1818573539}
-  projectilePrefab: {fileID: 2543802544534440102, guid: 1bf2e486b52c4d8498d2321005d1a4ee, type: 3}
-  terrainLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  patrolRadius: 24.3
-  attackCooldown: 1
-  forwardShotForce: 16.1
-  verticalShotForce: 1.09
-  visionRange: 13.4
-  engagementRange: 6.1
-=======
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1930170190}
@@ -22445,14 +21499,13 @@ MonoBehaviour:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
 --- !u!4 &1930170190
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937876538}
+  m_GameObject: {fileID: 1930170189}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.717, y: 5.6, z: 0.986}
@@ -22467,7 +21520,7 @@ BoxCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937876538}
+  m_GameObject: {fileID: 1930170189}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -22488,11 +21541,7 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1937876538}
-=======
   m_GameObject: {fileID: 1930170189}
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -22511,11 +21560,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-<<<<<<< HEAD
-  - {fileID: 2100000, guid: 2333ca9a8e321434e9f1749651bf089d, type: 2}
-=======
   - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22545,181 +21590,6 @@ MeshFilter:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-  m_GameObject: {fileID: 1937876538}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1937876538
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1930170190}
-  - component: {fileID: 1930170193}
-  - component: {fileID: 1930170192}
-  - component: {fileID: 1930170191}
-  - component: {fileID: 1937876541}
-  m_Layer: 6
-  m_Name: Cube (3)
-  m_TagString: Floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!33 &1937876541
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1937876538}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1959138953
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1959138954}
-  - component: {fileID: 1959138957}
-  - component: {fileID: 1959138956}
-  - component: {fileID: 1959138955}
-  m_Layer: 6
-  m_Name: Cube (9)
-  m_TagString: Floor
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1959138954
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959138953}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -175.51, y: 6.0700006, z: 97.5496}
-  m_LocalScale: {x: 10, y: 5, z: 10}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 932159948}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1959138955
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959138953}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &1959138956
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959138953}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 2333ca9a8e321434e9f1749651bf089d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1959138957
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959138953}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1959483103
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1959483104}
-  m_Layer: 0
-  m_Name: shoot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1959483104
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959483103}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.43671194, z: -0, w: -0.89960146}
-  m_LocalPosition: {x: -0.00000011920932, y: 0.34000003, z: -1.33}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2043439619}
-  m_LocalEulerAnglesHint: {x: 0, y: 308.211, z: 0}
-=======
   m_GameObject: {fileID: 1930170189}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1941891696
@@ -23034,17 +21904,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (7)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-=======
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23067,11 +21926,7 @@ GameObject:
   - component: {fileID: 1996804002}
   - component: {fileID: 1996804001}
   - component: {fileID: 1996804000}
-<<<<<<< HEAD
-  m_Layer: 6
-=======
   m_Layer: 0
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
   m_Name: Cube (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23223,17 +22078,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
-=======
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23244,14 +22088,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4509560183708430049, guid: 6216314d756b7254685e166928769fbd, type: 3}
   m_PrefabInstance: {fileID: 2006744417}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-=======
 --- !u!4 &2014103870 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5442196290141285557, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
   m_PrefabInstance: {fileID: 1085449407}
   m_PrefabAsset: {fileID: 0}
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
 --- !u!1 &2022810207
 GameObject:
   m_ObjectHideFlags: 0
@@ -23264,11 +22105,7 @@ GameObject:
   - component: {fileID: 2022810211}
   - component: {fileID: 2022810210}
   - component: {fileID: 2022810209}
-<<<<<<< HEAD
-  m_Layer: 6
-=======
   m_Layer: 0
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
   m_Name: Cube (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23498,17 +22335,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (17)
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 2147483647
-      objectReference: {fileID: 0}
-=======
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23563,205 +22389,6 @@ Transform:
   - {fileID: 789304545}
   m_Father: {fileID: 459413339}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
---- !u!1 &2043439613
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2043439619}
-  - component: {fileID: 2043439618}
-  - component: {fileID: 2043439617}
-  - component: {fileID: 2043439616}
-  - component: {fileID: 2043439615}
-  - component: {fileID: 2043439614}
-  - component: {fileID: 2043439620}
-  m_Layer: 0
-  m_Name: DustBunny
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!195 &2043439614
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043439613}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 3.5
-  m_Acceleration: 8
-  avoidancePriority: 50
-  m_AngularSpeed: 120
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 1
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
---- !u!114 &2043439615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043439613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6714ff1035be693479ce8a3486f8dc2c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HostileAI
-  navAgent: {fileID: 2043439614}
-  playerTransform: {fileID: 171205579}
-  firePoint: {fileID: 1959483104}
-  projectilePrefab: {fileID: 3571408627867002274, guid: 520b54bbcee92c74389865cbdf388102, type: 3}
-  terrainLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  playerLayerMask:
-    serializedVersion: 2
-    m_Bits: 128
-  patrolRadius: 10
-  attackCooldown: 1
-  forwardShotForce: 10
-  verticalShotForce: 5
-  visionRange: 20
-  engagementRange: 10
-  jumpForce: 10
-  hopInterval: 2
---- !u!136 &2043439616
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043439613}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2043439617
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043439613}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2043439618
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043439613}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &2043439619
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043439613}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 20.45, y: 0.89, z: -3.66}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1959483104}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
---- !u!54 &2043439620
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043439613}
-  serializedVersion: 5
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
-=======
 --- !u!1001 &2045586431
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23827,7 +22454,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82b9a7f4a9e18854d82237f78d7cdab8, type: 3}
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226
 --- !u!1 &2051584798
 GameObject:
   m_ObjectHideFlags: 0
@@ -23840,7 +22466,7 @@ GameObject:
   - component: {fileID: 2051584802}
   - component: {fileID: 2051584801}
   - component: {fileID: 2051584800}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24026,7 +22652,7 @@ GameObject:
   - component: {fileID: 2084502544}
   - component: {fileID: 2084502543}
   - component: {fileID: 2084502542}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Cube (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24391,12 +23017,12 @@ GameObject:
   - component: {fileID: 2112009422}
   - component: {fileID: 2112009424}
   - component: {fileID: 2112009423}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &2112009422
 RectTransform:
@@ -24472,12 +23098,12 @@ GameObject:
   - component: {fileID: 2140767386}
   - component: {fileID: 2140767385}
   - component: {fileID: 2140767384}
-  m_Layer: 6
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &2140767383
 RectTransform:
@@ -24869,14 +23495,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Parkour (16)
       objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8307389226687553952, guid: 6216314d756b7254685e166928769fbd, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24939,14 +23557,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cube (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4897872474960442325, guid: 902d5eacbb935984e949afd6137542e4, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24968,14 +23578,6 @@ PrefabInstance:
     - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_Name
       value: Sphere
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 2726428252741860209, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
-      propertyPath: m_StaticEditorFlags
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5442196290141285557, guid: 697dc5b46e8b8a44dae1e354d246c710, type: 3}
       propertyPath: m_LocalScale.x
@@ -25050,21 +23652,9 @@ SceneRoots:
   - {fileID: 1039671907529099862}
   - {fileID: 1357530045}
   - {fileID: 1929611169}
-<<<<<<< HEAD
-  - {fileID: 2043439619}
-  - {fileID: 1085449407}
-  - {fileID: 230000762}
-  - {fileID: 47101232}
-  - {fileID: 325231184}
-  - {fileID: 459413339}
-  - {fileID: 909459815}
-  - {fileID: 1393876805}
-  - {fileID: 1757812759}
-=======
   - {fileID: 459413339}
   - {fileID: 1757812759}
   - {fileID: 47101232}
   - {fileID: 1393876805}
   - {fileID: 325231184}
   - {fileID: 909459815}
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226

@@ -30,13 +30,8 @@ Transform:
   m_GameObject: {fileID: 1068730664732161586}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD:Assets/Prefabs/Dustball (1).prefab
-  m_LocalPosition: {x: 18.93, y: 1.1273, z: -3.29}
-  m_LocalScale: {x: 1.4604473, y: 1.4604473, z: 1.4604473}
-=======
   m_LocalPosition: {x: 9.57521, y: 4, z: 106.76888}
   m_LocalScale: {x: 1, y: 1, z: 1}
->>>>>>> 47676ffe02346d11c1310f5294755c7006a5c226:Assets/Prefabs/Dustball.prefab
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
