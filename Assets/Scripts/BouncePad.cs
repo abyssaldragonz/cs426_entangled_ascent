@@ -13,11 +13,13 @@ public class BouncePad : MonoBehaviour
     {
     }
     private void OnCollisionEnter(Collision other) {
-        var otherRB = other.gameObject.GetComponent<Rigidbody>();
-        Debug.Log("Bounce Pad: collision with player detected");
-        Vector3 direction = transform.position - other.transform.position;
-        direction.Normalize();
-        otherRB.linearVelocity = new Vector3(otherRB.linearVelocity.x, 0, otherRB.linearVelocity.z);
-        otherRB.AddForce(Vector3.up * 20f, ForceMode.Impulse);
+        if (other.gameObject.tag == "Player") {
+            var otherRB = other.gameObject.GetComponent<Rigidbody>();
+            Debug.Log("Bounce Pad: collision with player detected");
+            Vector3 direction = transform.position - other.transform.position;
+            direction.Normalize();
+            otherRB.linearVelocity = new Vector3(otherRB.linearVelocity.x, 0, otherRB.linearVelocity.z);
+            otherRB.AddForce(Vector3.up * 20f, ForceMode.Impulse);
+        }
     }
 }

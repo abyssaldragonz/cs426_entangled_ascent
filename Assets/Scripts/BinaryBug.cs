@@ -33,6 +33,7 @@ public class BinaryBug: MonoBehaviour
     [Header("Detection Ranges")]
     [SerializeField] private float visionRange = 20f;
     [SerializeField] private float engagementRange = 10f;
+    [SerializeField] private float speed = 0.25f;
 
     private bool isPlayerVisible;
     private bool isPlayerInRange;
@@ -42,9 +43,9 @@ public class BinaryBug: MonoBehaviour
     private void Awake()
     {
 
-        if(playerTransform == null)
+        if (playerTransform == null)
         {
-            GameObject playerObj = GameObject.Find("Player");
+            GameObject playerObj = GameObject.FindWithTag("Player");
             if(playerObj != null)
             {
                 playerTransform = playerObj.transform;
@@ -60,7 +61,6 @@ public class BinaryBug: MonoBehaviour
     {
         DetectPlayer();
         UpdateBehaviourState();
-        
     }
 
     private void OnDrawGizmosSelected()
@@ -76,7 +76,7 @@ public class BinaryBug: MonoBehaviour
     {
         // Check if player is within vision range
         isPlayerVisible = Physics.CheckSphere(transform.position, visionRange, playerLayerMask);
-        Debug.Log("Binary Bug sees player!");
+        // Debug.Log("Binary Bug sees player!");
 
         // Check if player is within engagement range
         isPlayerInRange = Physics.CheckSphere(transform.position, engagementRange, playerLayerMask);
@@ -115,14 +115,21 @@ public class BinaryBug: MonoBehaviour
     private void PerformChase()
     {
         if (playerTransform != null)
-            navAgent.SetDestination(playerTransform.position);
+        {
+            // navAgent.SetDestination(playerTransform.position);
+            float step =  speed * Time.deltaTime; 
+            transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, step);
+            GameObject playerObj = GameObject.FindWithTag("Player");
+            playerTransform = playerObj.transform;
+            // Debug.Log(playerTransform.position);
+        }
     }
 
    
 
     private void UpdateBehaviourState()
     {
-        if(!isPlayerVisible && !isPlayerInRange)
+        if (!isPlayerVisible && !isPlayerInRange)
         {
             PerformPatrol();
         }

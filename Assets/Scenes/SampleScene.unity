@@ -314,7 +314,7 @@ GameObject:
   - component: {fileID: 14125728}
   - component: {fileID: 14125727}
   - component: {fileID: 14125726}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trap room
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -2189,7 +2189,7 @@ GameObject:
   - component: {fileID: 242078141}
   - component: {fileID: 242078140}
   - component: {fileID: 242078139}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -4495,7 +4495,7 @@ GameObject:
   - component: {fileID: 473103446}
   - component: {fileID: 473103445}
   - component: {fileID: 473103444}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trap room (1)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -8951,7 +8951,7 @@ GameObject:
   - component: {fileID: 821162795}
   - component: {fileID: 821162794}
   - component: {fileID: 821162793}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (3)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -9308,7 +9308,7 @@ GameObject:
   - component: {fileID: 858483866}
   - component: {fileID: 858483865}
   - component: {fileID: 858483864}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: trap room (1)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -10393,7 +10393,7 @@ GameObject:
   - component: {fileID: 941483336}
   - component: {fileID: 941483335}
   - component: {fileID: 941483334}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Plane
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -10506,7 +10506,7 @@ GameObject:
   - component: {fileID: 955040384}
   - component: {fileID: 955040383}
   - component: {fileID: 955040382}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (1)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -12614,7 +12614,7 @@ GameObject:
   - component: {fileID: 1176337817}
   - component: {fileID: 1176337816}
   - component: {fileID: 1176337815}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: floor
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -14239,7 +14239,7 @@ GameObject:
   - component: {fileID: 1392320027}
   - component: {fileID: 1392320026}
   - component: {fileID: 1392320025}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (6)
   m_TagString: Floor
   m_Icon: {fileID: 0}
@@ -15349,7 +15349,7 @@ GameObject:
   - component: {fileID: 1482058603}
   - component: {fileID: 1482058602}
   - component: {fileID: 1482058601}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube (2)
   m_TagString: Floor
   m_Icon: {fileID: 0}

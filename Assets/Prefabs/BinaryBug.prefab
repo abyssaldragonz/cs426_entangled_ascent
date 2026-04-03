@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1972081238901447627}
   m_Layer: 0
   m_Name: BinaryBug
-  m_TagString: Untagged
+  m_TagString: BinaryBug
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,7 +139,8 @@ MonoBehaviour:
     m_Bits: 128
   patrolRadius: 35
   visionRange: 35
-  engagementRange: 10
+  engagementRange: 0
+  speed: 10
 --- !u!195 &4591695704047087028
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -147,7 +148,7 @@ NavMeshAgent:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176294935090839942}
-  m_Enabled: 1
+  m_Enabled: 0
   m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 3.5
