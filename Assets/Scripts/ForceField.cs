@@ -22,7 +22,7 @@ public class ForceField : MonoBehaviour
             Vector3 direction = transform.position - other.transform.position;
             direction.Normalize();
             direction = Vector3.Reflect(playerRB.linearVelocity, other.contacts[0].normal);
-            gameObject.GetComponent<Rigidbody>().AddForce(direction * 5000, ForceMode.Impulse);
+            // gameObject.GetComponent<Rigidbody>().AddForce(direction * 5000, ForceMode.Impulse);
             // Debug.Log($"Direction! " + direction);
         }
     }
