@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1614813000855914450}
   - component: {fileID: 5321316258809379725}
   - component: {fileID: 5643073752718326305}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Parkour
   m_TagString: Floor
   m_Icon: {fileID: 0}

@@ -1,6 +1,6 @@
 
 
-   using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using UnityEngine.AI;
 using Unity.VisualScripting;
@@ -11,7 +11,7 @@ using System.Runtime.CompilerServices;
 // BUT MAY BE RELEVANT TO FUTURE IMPLEMENTATION OF THE SENTRY'S ABILITIES.
 // THEY ARE LEFT IN AS A REFERENCE FOR HOW THE SENTRY'S COMBAT BEHAVIOR MIGHT WORK IN THE FUTURE.
 
-public class VacuumSentryCopy: MonoBehaviour
+public class VacuumSentryCOPY: MonoBehaviour
 {
 
     [Header("References")]
@@ -43,8 +43,8 @@ public class VacuumSentryCopy: MonoBehaviour
     private bool isPlayerInRange;
 
     private Rigidbody rb;
- 
-       private void Awake()
+
+    private void Awake()
     {
 
         if(playerTransform == null)
@@ -76,7 +76,7 @@ public class VacuumSentryCopy: MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, visionRange);
 
-      
+        
     }
 
     private void DetectPlayer()
@@ -88,25 +88,25 @@ public class VacuumSentryCopy: MonoBehaviour
         isPlayerInRange = Physics.CheckSphere(transform.position, engagementRange, playerLayerMask);
     }
 
-   private void FireProjectile()
-   {
-if (projectilePrefab == null || firePoint == null) return;
+    private void FireProjectile()
+    {
+    if (projectilePrefab == null || firePoint == null) return;
         
         // Instantiate the projectile and apply forces to it
-       Rigidbody projectileRb = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity).GetComponent<Rigidbody>();
-       projectileRb.AddForce(transform.forward * forwardShotForce, ForceMode.Impulse);
-       projectileRb.AddForce(transform.up * verticalShotForce, ForceMode.Impulse);
-       Destroy(projectileRb.gameObject, 3f);
+        Rigidbody projectileRb = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity).GetComponent<Rigidbody>();
+        projectileRb.AddForce(transform.forward * forwardShotForce, ForceMode.Impulse);
+        projectileRb.AddForce(transform.up * verticalShotForce, ForceMode.Impulse);
+        Destroy(projectileRb.gameObject, 3f);
     }
 
     private void FindPatrolPoint()
     {
-       float randomX = Random.Range(-patrolRadius, patrolRadius);
-       float randomZ = Random.Range(-patrolRadius, patrolRadius);
-       Vector3 potentialPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
+        float randomX = Random.Range(-patrolRadius, patrolRadius);
+        float randomZ = Random.Range(-patrolRadius, patrolRadius);
+        Vector3 potentialPoint = new Vector3(transform.position.x + randomX, transform.position.y, transform.position.z + randomZ);
 
         // Raycast down from above the potential point to find the ground (using terrainLayer)
-        if(Physics.Raycast(potentialPoint,-transform.up, 2f, terrainLayer))
+        if (Physics.Raycast(potentialPoint, -transform.up, 2f, terrainLayer))
         {
             currentPatrolPoint = potentialPoint;
             haspatrolPoint = true;
@@ -115,7 +115,7 @@ if (projectilePrefab == null || firePoint == null) return;
 
     private IEnumerator AttackcooldownRoutine()
     {
-     isOnAttackCooldown = true;
+        isOnAttackCooldown = true;
         yield return new WaitForSeconds(attackCooldown);
         isOnAttackCooldown = false;
     }
@@ -129,35 +129,35 @@ if (projectilePrefab == null || firePoint == null) return;
 
         if (Vector3.Distance(transform.position, currentPatrolPoint) < 1f)
             haspatrolPoint = false;
-    
+
     }
 
 
     private void PerformChase()
     {
-        if(playerTransform != null)
+        if (playerTransform != null)
             navAgent.SetDestination(playerTransform.position);
     }
 
     private void PerformAttack()
     {
-      navAgent.SetDestination(transform.position);
+        navAgent.SetDestination(transform.position);
 
-       if(playerTransform != null)
-       {
-        transform.LookAt(playerTransform);
-       }
+        if(playerTransform != null)
+        {
+            transform.LookAt(playerTransform);
+        }
 
-       if(!isOnAttackCooldown)
-       {
-       FireProjectile();
-        StartCoroutine(AttackcooldownRoutine());
-       }
+        if(!isOnAttackCooldown)
+        {
+            FireProjectile();
+            StartCoroutine(AttackcooldownRoutine());
+        }
     }
 
-       private void UpdateBehaviourState()
-        {
-           if(!isPlayerVisible && !isPlayerInRange)
+    private void UpdateBehaviourState()
+    {
+        if(!isPlayerVisible && !isPlayerInRange)
         {
             PerformPatrol();
         }
@@ -167,19 +167,15 @@ if (projectilePrefab == null || firePoint == null) return;
             PerformChase();
         }
 
-       else if (isPlayerVisible && isPlayerInRange)
-        //{
+        else if (isPlayerVisible && isPlayerInRange)
             PerformAttack();
-        }
-private void OnCollisionEnter(Collision other) {
+    }
+
+    private void OnCollisionEnter(Collision other) {
         if (other.gameObject.tag == "Player") {
             Debug.Log("Vacuum Sentry hit the player!");
             other.gameObject.GetComponent<PlayerMovement>().LoseLife();
         }
     }
-    }
-
-
-
- // ========== Observed Player ========================================
-  
+}
+// ========== Observed Player ========================================

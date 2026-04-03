@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private GameObject particles;
     [SerializeField] private TextMeshProUGUI livesPanel;
+    [SerializeField] private TextMeshProUGUI tunnelPanel;
 
     // movement related input
     // InputAction moveAction;
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     // Lives and game state tracking
     private int catLives = 9;
     private bool isGrounded;
+    private bool hasEnergy;
     
     private const float force = 10f;
     private const float speed = 15f;
@@ -43,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         t = GetComponent<Transform>();
         isGrounded = false;
+        hasEnergy = false;
         Debug.Log("STARTING PLAYER.");
     }
 
@@ -82,7 +85,7 @@ public class PlayerMovement : MonoBehaviour
 
 
             // ========== PHASING THROUGH THE FORCE FIELDS ===================
-            else if (Keyboard.current.qKey.wasPressedThisFrame)
+            else if (Keyboard.current.qKey.wasPressedThisFrame && hasEnergy)
             {
                 var closestObj = findClosestEnergy();
 
@@ -91,7 +94,10 @@ public class PlayerMovement : MonoBehaviour
 
                 // closestObj.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
                 Debug.Log($"Q pressed! Destroying field at " + closestObj.transform.position);
-                Destroy(closestObj); // remove the force field that is closest to player
+                tunnelPanel.gameObject.SetActive(false);
+                hasEnergy = false;
+                
+                StartCoroutine(RemoveField(closestObj));
             }
             // ===============================================================
         }
@@ -141,9 +147,20 @@ public class PlayerMovement : MonoBehaviour
         livesPanel.text = "Lives Left: " + catLives;
     }
 
+    // ========== COLLISION AND TRIGGER DETECTIONS =======================
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "EnergyOrb")
+        {
+            tunnelPanel.gameObject.SetActive(true);
+            hasEnergy = true;
+            Debug.Log("Energy Orb collected!");
+        }
+    }
+
     void OnCollisionEnter(Collision coll)
     {
-        if(coll.gameObject.tag == "Floor")
+        if(coll.gameObject.tag == "Floor" || coll.gameObject.tag == "Bouncy")
         {
             isGrounded = true;
         }
@@ -151,9 +168,23 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionExit(Collision coll)
     {
-        if(coll.gameObject.tag == "Floor")
+        if(coll.gameObject.tag == "Floor" || coll.gameObject.tag == "Bouncy")
         {
             isGrounded = false;
         }
+    }
+
+    // ========== COROUTINE CODE =========================================
+    IEnumerator RemoveField(GameObject energyField)
+    {
+        // remove the force field that is closest to player
+        energyField.SetActive(false); 
+        // Debug.Log("Coroutine started at: " + Time.time);
+        
+        yield return new WaitForSeconds(2);
+        
+        // bring it back
+        energyField.SetActive(true);
+        // Debug.Log("Coroutine finished at: " + Time.time);
     }
 }
