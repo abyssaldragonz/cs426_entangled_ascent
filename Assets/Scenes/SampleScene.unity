@@ -14230,7 +14230,6 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1914c991045f8b04f88ea049bc659a40, type: 3}
   m_Name: 
-<<<<<<< HEAD
   m_EditorClassIdentifier: Assembly-CSharp::binarybugg
   navAgent: {fileID: 1357530046}
   playerTransform: {fileID: 171205579}
@@ -14244,10 +14243,6 @@ MonoBehaviour:
   visionRange: 67
   engagementRange: 2
 --- !u!1 &1368133347
-=======
-  m_EditorClassIdentifier: Assembly-CSharp::DustBunny
---- !u!1 &1363785247
->>>>>>> 4859513485008c7c68a71a69aa382105324a7c48
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18884,7 +18879,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
-<<<<<<< HEAD
 --- !u!114 &1809698338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18949,9 +18943,6 @@ Transform:
   m_Father: {fileID: 1929611169}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1850889211
-=======
---- !u!1 &1857352607
->>>>>>> 4859513485008c7c68a71a69aa382105324a7c48
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19820,7 +19811,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
-<<<<<<< HEAD
 --- !u!195 &1929611171
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -19872,9 +19862,6 @@ MonoBehaviour:
   visionRange: 13.4
   engagementRange: 6.1
 --- !u!1 &1937876538
-=======
---- !u!1 &1930170189
->>>>>>> 4859513485008c7c68a71a69aa382105324a7c48
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -19935,7 +19922,6 @@ MeshRenderer:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
   m_GameObject: {fileID: 1937876538}
   m_Enabled: 1
   m_CastShadows: 1
@@ -20404,9 +20390,6 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2092165452}
-=======
-  m_GameObject: {fileID: 1930170189}
->>>>>>> 4859513485008c7c68a71a69aa382105324a7c48
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -22012,15 +21995,4 @@ SceneRoots:
   - {fileID: 1039671907529099862}
   - {fileID: 1357530045}
   - {fileID: 1929611169}
-<<<<<<< HEAD
   - {fileID: 2043439619}
-=======
-  - {fileID: 459413339}
-  - {fileID: 1757812759}
-  - {fileID: 47101232}
-  - {fileID: 1393876805}
-  - {fileID: 325231184}
-  - {fileID: 909459815}
-  - {fileID: 1085449407}
-  - {fileID: 230000762}
->>>>>>> 4859513485008c7c68a71a69aa382105324a7c48
