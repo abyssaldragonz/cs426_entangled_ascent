@@ -31,8 +31,8 @@ public class PlayerMovement : MonoBehaviour
     private int catLives = 9;
     private bool isGrounded;
     
-    private const float force = 1500f;
-    private const float speed = 10f;
+    private const float force = 10f;
+    private const float speed = 15f;
 
     void Start()
     {
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
             // ========== Jump with SPACE ====================================
             if (isGrounded && Keyboard.current.spaceKey.wasPressedThisFrame)
             {
-                rb.AddForce(Vector3.up * force * Time.deltaTime, ForceMode.Impulse);
+                rb.AddForce(Vector3.up * force, ForceMode.Impulse);
                 Debug.Log("Jump!");
             }
             // ===============================================================
@@ -117,11 +117,12 @@ public class PlayerMovement : MonoBehaviour
         var arr = GameObject.FindGameObjectsWithTag("Tunnelable_Wall");
         var pos = transform.position;
 
-        float dist = 150;
+        float dist = 1500;
         GameObject nearest = null;
         foreach(var go in arr)
         {
             var d = (go.transform.position - pos).sqrMagnitude; 
+            // Debug.Log($"Field detected at " + d);
             if (d < dist)
             {
                 nearest = go;
