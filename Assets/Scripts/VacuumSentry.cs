@@ -1,74 +1,125 @@
-using System;
-using System.Runtime.CompilerServices;
-using System.Xml.Serialization;
-using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections;
 
 public class VacuumSentry : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private enum SentryState
     {
-        
+        Idle,
+        Attack,
+        Cooldown
     }
 
-    // Update is called once per frame
-    void Update()
+    [Header("References")]
+    [SerializeField] private Transform playerTransform;
+    [SerializeField] private Transform firePoint;
+    [SerializeField] private GameObject projectilePrefab;
+
+    [Header("Detection")]
+    [SerializeField] private float visionRange = 12f;
+    [SerializeField] private LayerMask playerLayerMask;
+
+    [Header("Attack")]
+    [SerializeField] private float attackCooldown = 2f;
+    [SerializeField] private float projectileSpeed = 12f;
+
+    private SentryState currentState = SentryState.Idle;
+    private bool playerDetected = false;
+    private bool isCoolingDown = false;
+
+    private void Awake()
     {
-        
-    }
-
-    // ========== Observed Player ========================================
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player") {
-            int sentryChoice = UnityEngine.Random.Range(0,2); 
-            Debug.Log("Player observed by sentry! Choosing option: " + sentryChoice);
-
-            switch (sentryChoice) {
-                case 0: // freeze player
-                    FreezePlayer(other.gameObject);
-                    break;
-
-                case 1: // phase through the ground to previous floor
-                    // to be implemented
-                    break;
+        if (playerTransform == null)
+        {
+            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
+            if (playerObj != null)
+            {
+                playerTransform = playerObj.transform;
             }
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    private void Update()
     {
-        if (other.gameObject.tag == "Player")
+        DetectPlayer();
+        UpdateState();
+    }
+
+    private void DetectPlayer()
+    {
+        playerDetected = Physics.CheckSphere(
+            transform.position,
+            visionRange,
+            playerLayerMask
+        );
+    }
+
+    private void UpdateState()
+    {
+        switch (currentState)
         {
-            UnfreezePlayer(other.gameObject);
+            case SentryState.Idle:
+                if (playerDetected && !isCoolingDown)
+                {
+                    currentState = SentryState.Attack;
+                }
+                break;
+
+            case SentryState.Attack:
+                AttackPlayer();
+                currentState = SentryState.Cooldown;
+                StartCoroutine(CooldownRoutine());
+                break;
+
+            case SentryState.Cooldown:
+                if (!playerDetected && !isCoolingDown)
+                {
+                    currentState = SentryState.Idle;
+                }
+                else if (playerDetected && !isCoolingDown)
+                {
+                    currentState = SentryState.Attack;
+                }
+                break;
         }
     }
 
-
-    // ========== Freezing Player ========================================
-    private void FreezePlayer(GameObject player)
+    private void AttackPlayer()
     {
-        Debug.Log("Spotlight: collision with player detected");
-        var playerRB = player.GetComponent<Rigidbody>();
-        // stop player from moving
-        player.GameObject().GetComponent<PlayerMovement>().enabled = false; 
-        // player.GameObject().SetActive(false);
-        playerRB.constraints = RigidbodyConstraints.FreezeAll;
+        if (projectilePrefab == null || firePoint == null || playerTransform == null)
+            return;
+
+        Vector3 lookTarget = new Vector3(
+            playerTransform.position.x,
+            transform.position.y,
+            playerTransform.position.z
+        );
+        transform.LookAt(lookTarget);
+
+        GameObject projectile = Instantiate(
+            projectilePrefab,
+            firePoint.position,
+            firePoint.rotation
+        );
+
+        Rigidbody rb = projectile.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            Vector3 direction = (playerTransform.position - firePoint.position).normalized;
+            rb.linearVelocity = direction * projectileSpeed;
+        }
     }
 
-    private void UnfreezePlayer(GameObject player)
+    private IEnumerator CooldownRoutine()
     {
-        var playerRB = player.GetComponent<Rigidbody>();
-        // let player move
-        player.GameObject().GetComponent<PlayerMovement>().enabled = true; 
-        // player.GameObject().SetActive(true);
-        playerRB.constraints = RigidbodyConstraints.None;
-        playerRB.constraints = RigidbodyConstraints.FreezeRotation;
+        isCoolingDown = true;
+        yield return new WaitForSeconds(attackCooldown);
+        isCoolingDown = false;
     }
 
-    // ========== Phasing Player =========================================
-    private void PhasingPlayer(GameObject player)
+    private void OnDrawGizmosSelected()
     {
-        // TODO
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, visionRange);
     }
 }
