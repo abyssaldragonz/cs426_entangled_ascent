@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 852201895573966051}
   - component: {fileID: 2406554536375302212}
   - component: {fileID: 2813777859894747864}
+  - component: {fileID: 4422533292698332745}
   m_Layer: 0
   m_Name: EnergyOrb
   m_TagString: EnergyOrb
@@ -115,6 +116,28 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &4422533292698332745
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2726428252741860209}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2f36c9ab2fd0cfa43a8fbc840bbcc995, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &5023519005263784958
 GameObject:
   m_ObjectHideFlags: 0

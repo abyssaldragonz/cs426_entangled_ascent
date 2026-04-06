@@ -1,3 +1,3 @@
-repository "Animation Test/entangled_ascent@2475920348970@cloud"
+rep "Animation Test/entangled_ascent@2475920348970@cloud"
   path "/"
     smartbranch "/main"
