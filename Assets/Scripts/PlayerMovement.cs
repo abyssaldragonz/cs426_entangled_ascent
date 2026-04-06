@@ -23,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private float pitch = 0.0f;
     private float yaw = 0.0f;
 
-
+    private Animation anim;
     Rigidbody rb;
     Transform t;
     
@@ -56,7 +56,11 @@ public class PlayerMovement : MonoBehaviour
             Vector3 moveDir = Vector3.zero;
 
             if (Keyboard.current.wKey.isPressed)
-                moveDir += transform.forward;
+            {
+                 moveDir += transform.forward;
+                 anim.Play("Run");
+            }
+               
 
             if (Keyboard.current.sKey.isPressed)
                 moveDir -= transform.forward;
