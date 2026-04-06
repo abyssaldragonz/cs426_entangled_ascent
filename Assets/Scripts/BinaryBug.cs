@@ -79,11 +79,10 @@ public class BinaryBug: MonoBehaviour
     // ========== DIGITAL SCENT ==========================================
     void FollowScentTrail()
     {
-        // TODO: FIX THIS
         anim.ResetTrigger("DetectPlayer");
         GameObject playerObj = GameObject.FindWithTag("Player");
         playerTransform = playerObj.transform;
-        playerPositions.Add(playerTransform.position); // add the next player position
+        playerPositions.Insert(0, playerTransform.position); // add the next player position
 
         speed = 3f; // slow down
         float step =  speed * Time.deltaTime; 
@@ -91,18 +90,18 @@ public class BinaryBug: MonoBehaviour
         
         playerPositions.RemoveAt(0); // remove first node 
         Debug.Log("Bug following scent...");
-        Debug.Log("Player positions:");
-        foreach( var x in playerPositions) {
-            Debug.Log( x.ToString());
-        }
+        // Debug.Log("Player positions:");
+        // foreach( var x in playerPositions) {
+        //     Debug.Log( x.ToString());
+        // }
     }
 
 
     // beeline straight towards the player
-    private void PerformChase()
+    private void PerformChase(float newSpeed)
     {
         anim.SetTrigger("DetectPlayer");
-        speed = 5f;
+        speed = newSpeed;
         if (playerTransform != null)
         {
             float step =  speed * Time.deltaTime; 
@@ -125,19 +124,20 @@ public class BinaryBug: MonoBehaviour
                 InvokeRepeating(nameof(FollowScentTrail), 0.0f, 3f);
                 runInvoke = true; // just run this once
             }
+            PerformChase(3f);
         }
 
         else if (isPlayerVisible && !isPlayerInRange)
         {
             anim.ResetTrigger("AttackMode"); // no longer in attack animation
             playerPositions.Clear(); // empty out the scent
-            PerformChase(); // and chase
+            PerformChase(5f); // and chase
         }
 
         else if (isPlayerInRange)
         {
             anim.SetTrigger("AttackMode");
-            PerformChase();
+            PerformChase(5f);
         }
 
         // bug sees player so it marked the scent of player

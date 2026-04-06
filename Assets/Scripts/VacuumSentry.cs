@@ -16,7 +16,7 @@ public class VacuumSentry : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
 
     [Header("Detection")]
-    [SerializeField] private float visionRange = 12f;
+    [SerializeField] private float visionRange = 30;
     [SerializeField] private LayerMask playerLayerMask;
 
     [Header("Attack")]
@@ -95,19 +95,21 @@ public class VacuumSentry : MonoBehaviour
             playerTransform.position.z
         );
         transform.LookAt(lookTarget);
+        firePoint.LookAt(lookTarget);
 
         GameObject projectile = Instantiate(
             projectilePrefab,
             firePoint.position,
-            firePoint.rotation
+            Quaternion.identity
         );
 
-        Rigidbody rb = projectile.GetComponent<Rigidbody>();
-        if (rb != null)
+        Rigidbody projRB = projectile.GetComponent<Rigidbody>();
+        if (projRB != null)
         {
-            Vector3 direction = (playerTransform.position - firePoint.position).normalized;
-            rb.linearVelocity = direction * projectileSpeed;
+            Vector3 direction = lookTarget.normalized;
+            projRB.linearVelocity = direction * projectileSpeed;
         }
+        Destroy(projRB, 3f);
     }
 
     private IEnumerator CooldownRoutine()

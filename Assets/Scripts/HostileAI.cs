@@ -60,7 +60,7 @@ public class HostileAI : MonoBehaviour
     {
         DetectPlayer();
         UpdateBehaviourState();
-        
+        transform.LookAt(playerTransform);
     }
 
     private void OnDrawGizmosSelected()

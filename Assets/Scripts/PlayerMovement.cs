@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     private int catLives = 9;
     private bool isGrounded;
     private bool hasEnergy;
+    private Animator anim;
     
     private const float force = 10f;
     private const float speed = 15f;
@@ -46,12 +47,19 @@ public class PlayerMovement : MonoBehaviour
         t = GetComponent<Transform>();
         isGrounded = false;
         hasEnergy = false;
+        anim = transform.GetChild(0).GetComponent<Animator>();
         Debug.Log("STARTING PLAYER.");
     }
 
     void Update()
     {
+        // reset walking animations
+        if (Keyboard.current == null)
+            anim.ResetTrigger("walking");
+            
         if (Keyboard.current != null) {
+            anim.SetTrigger("walking");
+
             // ========== Key Movements ======================================
             Vector3 moveDir = Vector3.zero;
 
@@ -68,6 +76,7 @@ public class PlayerMovement : MonoBehaviour
                 moveDir += transform.right;
 
             moveDir = moveDir.normalized;
+            
 
             Vector3 currentVel = rb.linearVelocity;
             // Calculate movement direction from WASD input and directly set Rigidbody velocity
