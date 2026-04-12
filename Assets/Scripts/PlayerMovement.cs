@@ -3,16 +3,19 @@ using System.Collections;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using TMPro;
-using UnityEngine.UIElements;
+using UnityEngine.UI;
 using System;
+using Unity.Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private AudioListener audioListener;
-    [SerializeField] private Camera playerCamera;
+    [SerializeField] private CinemachineCamera playerCamera;
     [SerializeField] private GameObject particles;
-    [SerializeField] private TextMeshProUGUI livesPanel;
-    [SerializeField] private TextMeshProUGUI tunnelPanel;
+    [SerializeField] private RectTransform livesPanel;
+    [SerializeField] public GameObject item_icon; // icon to show up in UI
+    [SerializeField] private RectTransform tunnelPanel;
 
     // movement related input
     // InputAction moveAction;
@@ -32,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private int catLives = 9;
     private bool isGrounded;
     private bool hasEnergy;
+    [SerializeField] private AudioClip loseClip;
     private Animator anim;
     
     private const float force = 10f;
@@ -48,18 +52,27 @@ public class PlayerMovement : MonoBehaviour
         isGrounded = false;
         hasEnergy = false;
         anim = transform.GetChild(0).GetComponent<Animator>();
+
+        // adding lives
+        for (int i = 0; i < 9; i++)
+        {
+            GameObject newItem = Instantiate(item_icon, livesPanel);
+            // newItem.transform.SetParent(livesPanel, true);
+        }
+
         Debug.Log("STARTING PLAYER.");
     }
 
     void Update()
     {
+        anim.SetBool("walking", 
+            Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D));
+
         // reset walking animations
         if (Keyboard.current == null)
             anim.ResetTrigger("walking");
             
         if (Keyboard.current != null) {
-            anim.SetTrigger("walking");
-
             // ========== Key Movements ======================================
             Vector3 moveDir = Vector3.zero;
 
@@ -110,6 +123,8 @@ public class PlayerMovement : MonoBehaviour
             }
             // ===============================================================
         }
+
+        
         
         // ========== Camera Rotation ====================================
         UnityEngine.Cursor.lockState = CursorLockMode.Locked;
@@ -153,7 +168,19 @@ public class PlayerMovement : MonoBehaviour
     public void LoseLife()
     {
         catLives--;
-        livesPanel.text = "Lives Left: " + catLives;
+        // livesPanel.text = "Lives Left: " + catLives;
+        
+        // remove from panel
+        Destroy(livesPanel.GetChild(1).gameObject);
+
+        // check if zero
+        if (catLives == 0)
+        {
+            GetComponent<AudioSource>().PlayOneShot(loseClip);
+            // show restart menu
+            SceneManager.LoadScene("RestartScene");
+            return;
+        }
     }
 
     // ========== COLLISION AND TRIGGER DETECTIONS =======================
