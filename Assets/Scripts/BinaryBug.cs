@@ -34,8 +34,11 @@ public class BinaryBug: MonoBehaviour
     public List<Vector3> playerPositions = new List<Vector3>();
     private Rigidbody rb;
 
-    // ANIMATIONS
+    // ANIMATIONS AND SOUND
     private Animator anim;
+    public AudioSource audioSource;
+    public AudioClip idleClip;
+    public AudioClip attackClip;
  
     private void Awake()
     {
@@ -134,10 +137,11 @@ public class BinaryBug: MonoBehaviour
             PerformChase(5f); // and chase
         }
 
-        else if (isPlayerInRange)
+        else if (isPlayerInRange) // do attack
         {
             anim.SetTrigger("AttackMode");
             PerformChase(5f);
+            audioSource.PlayOneShot(attackClip);
         }
 
         // bug sees player so it marked the scent of player

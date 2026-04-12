@@ -26,6 +26,8 @@ public class VacuumSentry : MonoBehaviour
     private SentryState currentState = SentryState.Idle;
     private bool playerDetected = false;
     private bool isCoolingDown = false;
+    public AudioSource audioSource;
+    public AudioClip attackClip;
 
     private void Awake()
     {
@@ -86,6 +88,7 @@ public class VacuumSentry : MonoBehaviour
 
     private void AttackPlayer()
     {
+        audioSource.PlayOneShot(attackClip);
         if (projectilePrefab == null || firePoint == null || playerTransform == null)
             return;
 

@@ -39,6 +39,8 @@ public class HostileAI : MonoBehaviour
  
     public float jumpForce = 1000f;
     public float hopInterval = 2f;
+    public AudioSource audioSource;
+    public AudioClip attackClip;
     private void Awake()
     {
 
@@ -155,18 +157,19 @@ public class HostileAI : MonoBehaviour
 
     private void PerformAttack()
     {
-       navAgent.SetDestination(transform.position);
+        navAgent.SetDestination(transform.position);
 
-       if(playerTransform != null)
-       {
-        transform.LookAt(playerTransform);
-       }
+        if(playerTransform != null)
+        {
+            transform.LookAt(playerTransform);
+        }
 
-       if(!isOnAttackCooldown)
-       {
-        FireProjectile();
-        StartCoroutine(AttackcooldownRoutine());
-       }
+        if(!isOnAttackCooldown)
+        {
+            audioSource.PlayOneShot(attackClip);
+            FireProjectile();
+            StartCoroutine(AttackcooldownRoutine());
+        }
     }
 
     private void UpdateBehaviourState()
