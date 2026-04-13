@@ -119,6 +119,17 @@ public class VacuumSentry : MonoBehaviour
             firePoint.rotation
         );
 
+        Collider projectileCol = projectile.GetComponent<Collider>();
+        Collider[] sentryCols = GetComponentsInChildren<Collider>();
+
+        if (projectileCol != null)
+        {
+            foreach (Collider sentryCol in sentryCols)
+            {
+                Physics.IgnoreCollision(projectileCol, sentryCol);
+            }
+        }
+
         Rigidbody projRB = projectile.GetComponent<Rigidbody>();
         if (projRB != null)
         {

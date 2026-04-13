@@ -1,74 +1,39 @@
-using System;
-using System.Runtime.CompilerServices;
-using System.Xml.Serialization;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class VacuumProjectile : MonoBehaviour
+public class SentryProjectile : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private float lifetime = 3f;
+
+    private void Start()
     {
-        
+        Destroy(gameObject, lifetime);
     }
 
-    // Update is called once per frame
-    void Update()
+    //TODO: 50/50 take life or phase through ground
+
+    private void OnCollisionEnter(Collision other)
     {
-        
-    }
+        Debug.Log("Projectile collided with: " + other.gameObject.name);
 
-    // ========== Observed Player ========================================
-    private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "Player") {
-            int sentryChoice = UnityEngine.Random.Range(0,2); 
-            Debug.Log("Player observed by sentry! Choosing option: " + sentryChoice);
-
-            switch (sentryChoice) {
-                case 0: // freeze player
-                    FreezePlayer(other.gameObject);
-                    break;
-
-                case 1: // phase through the ground to previous floor
-                    // to be implemented
-                    break;
-            }
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.tag == "Player")
+        if (other.gameObject.CompareTag("Player"))
         {
-            UnfreezePlayer(other.gameObject);
+            Debug.Log("Projectile hit the player!");
+
+            PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
+            if (player != null)
+            {
+                player.LoseLife();
+                Debug.Log("Life taken from player.");
+            }
+            else
+            {
+                Debug.Log("PlayerMovement script not found on collided player object.");
+            }
+
+            Destroy(gameObject);
+            return;
         }
-    }
 
-
-    // ========== Freezing Player ========================================
-    private void FreezePlayer(GameObject player)
-    {
-        Debug.Log("Spotlight: collision with player detected");
-        var playerRB = player.GetComponent<Rigidbody>();
-        // stop player from moving
-        player.GameObject().GetComponent<PlayerMovement>().enabled = false; 
-        // player.GameObject().SetActive(false);
-        playerRB.constraints = RigidbodyConstraints.FreezeAll;
-    }
-
-    private void UnfreezePlayer(GameObject player)
-    {
-        var playerRB = player.GetComponent<Rigidbody>();
-        // let player move
-        player.GameObject().GetComponent<PlayerMovement>().enabled = true; 
-        // player.GameObject().SetActive(true);
-        playerRB.constraints = RigidbodyConstraints.None;
-        playerRB.constraints = RigidbodyConstraints.FreezeRotation;
-    }
-
-    // ========== Phasing Player =========================================
-    private void PhasingPlayer(GameObject player)
-    {
-        // TODO
+        Destroy(gameObject);
     }
 }
