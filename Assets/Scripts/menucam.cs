@@ -1,20 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class MenuCam : MonoBehaviour
+
+public class GameManager : MonoBehaviour
 {
+    // LOAD GAME FROM MENU
     public void PlayGame()
     {
-        SceneManager.LoadScene("GameScene");
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+        Time.timeScale = 1f; // just in case game was paused
+        SceneManager.LoadScene("SampleScene");
     }
 
-    // Update is called once per frame
-    void Update()
+    // RESTART CURRENT LEVEL
+    public void RestartGame()
     {
-        
+        Time.timeScale = 1f; // reset time
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
