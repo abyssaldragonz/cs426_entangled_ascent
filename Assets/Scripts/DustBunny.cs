@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DustBunny : MonoBehaviour
@@ -8,8 +6,8 @@ public class DustBunny : MonoBehaviour
     public float speed = 5f;
     public float stoppingDistance = 2f;
     public float visionRange = 10f;
-    public float wanderRadius = 5f;      // How far it wanders
-    public float wanderInterval = 3f;    // Time between changing direction
+    public float wanderRadius = 5f; // how far it wanders
+    public float wanderInterval = 3f; // how long it waits in between changing directions
 
     [Header("Shooting Settings")]
     public GameObject ballPrefab;
@@ -17,29 +15,35 @@ public class DustBunny : MonoBehaviour
     public float shootRange = 10f;
     public float fireRate = 1f;
 
+    [Header("Audio")]
+    public AudioSource footstepAudio;
+    public AudioSource shootAudio;
+
     private Transform player;
     private Rigidbody rb;
-    private float fireCooldown = 0f;
+    private float fireCooldown;
     private Vector3 wanderTarget;
-    private float wanderTimer = 0f;
+    private float wanderTimer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        player = GameObject.FindGameObjectWithTag("Player")?.transform;
+
+        GameObject p = GameObject.FindGameObjectWithTag("Player");
+        if (p != null)
+            player = p.transform;
+
         ChooseNewWanderTarget();
     }
 
     void FixedUpdate()
     {
-        if (player != null && CanSeePlayer())
-        {
+        if (player == null) return;
+
+        if (CanSeePlayer())
             ChaseAndShoot();
-        }
         else
-        {
             Wander();
-        }
 
         if (fireCooldown > 0f)
             fireCooldown -= Time.fixedDeltaTime;
@@ -48,11 +52,10 @@ public class DustBunny : MonoBehaviour
     bool CanSeePlayer()
     {
         Vector3 origin = transform.position + Vector3.up * 1.5f;
-        Vector3 direction = (player.position - origin);
+        Vector3 direction = (player.position - origin).normalized;
 
         if (Physics.Raycast(origin, direction, out RaycastHit hit, visionRange))
         {
-            // Debug.Log("Dust Bunny sees player!");
             return hit.transform.CompareTag("Player");
         }
         return false;
@@ -60,20 +63,21 @@ public class DustBunny : MonoBehaviour
 
     void ChaseAndShoot()
     {
-        Vector3 direction = (player.position - transform.position);
-        float distance = direction.magnitude;
+        float distance = Vector3.Distance(transform.position, player.position);
 
-        // Move towards player
         if (distance > stoppingDistance)
         {
-            float move = speed * Time.deltaTime;
-            transform.position = Vector3.MoveTowards(transform.position, player.position, move);
+            Vector3 newPos = Vector3.MoveTowards(
+                transform.position,
+                player.position,
+                speed * Time.fixedDeltaTime
+            );
+
+            rb.MovePosition(newPos);
         }
 
-        // Face the player
         transform.LookAt(player.position);
 
-        // Shoot
         if (distance <= shootRange && fireCooldown <= 0f)
         {
             Shoot();
@@ -90,10 +94,14 @@ public class DustBunny : MonoBehaviour
             ChooseNewWanderTarget();
         }
 
-        float move = speed * Time.fixedDeltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, wanderTarget, move);
+        Vector3 newPos = Vector3.MoveTowards(
+            transform.position,
+            wanderTarget,
+            speed * Time.fixedDeltaTime
+        );
 
-        // Slowly rotate towards wander target
+        rb.MovePosition(newPos);
+
         Vector3 lookPos = new Vector3(wanderTarget.x, transform.position.y, wanderTarget.z);
         transform.LookAt(lookPos);
     }
@@ -101,33 +109,58 @@ public class DustBunny : MonoBehaviour
     void ChooseNewWanderTarget()
     {
         Vector2 randomCircle = Random.insideUnitCircle * wanderRadius;
-        wanderTarget = new Vector3(transform.position.x + randomCircle.x, transform.position.y, transform.position.z + randomCircle.y);
+
+        wanderTarget = new Vector3(
+            transform.position.x + randomCircle.x,
+            transform.position.y,
+            transform.position.z + randomCircle.y
+        );
+
         wanderTimer = wanderInterval;
     }
 
     void Shoot()
     {
-        if (ballPrefab == null || firePoint == null)
-        {
-            Debug.LogWarning("Ball Prefab or FirePoint not assigned!");
-            return;
-        }
+        if (ballPrefab == null || firePoint == null) return;
 
         firePoint.LookAt(player);
 
-        Rigidbody projectileRb = Instantiate(ballPrefab, firePoint.position, firePoint.rotation).GetComponent<Rigidbody>();
-        projectileRb.linearVelocity += Vector3.up * 3;
-        projectileRb.AddForce(projectileRb.gameObject.transform.forward * 5f * Time.deltaTime);
+        GameObject bullet = Instantiate(ballPrefab, firePoint.position, firePoint.rotation);
 
-        // destroy after 3 seconds
-        Destroy(projectileRb.gameObject, 3f);
+        Rigidbody rbBullet = bullet.GetComponent<Rigidbody>();
+
+        if (rbBullet != null)
+        {
+            rbBullet.linearVelocity = Vector3.zero;
+            rbBullet.AddForce(firePoint.forward * 10f, ForceMode.Impulse);
+        }
+    
+    if (shootAudio != null)
+    {
+        shootAudio.pitch = Random.Range(0.95f, 1.05f);
+        shootAudio.Play();
+    }
+        Destroy(bullet, 3f);
     }
 
-    // ========== Collided with Player ===================================
-    private void OnCollisionEnter(Collision other) {
-        if (other.gameObject.tag == "Player") {
+    // Animation Event Function
+    public void PlayFootstep()
+    {
+        if (footstepAudio == null) return;
+
+        footstepAudio.pitch = Random.Range(0.9f, 1.1f);
+        footstepAudio.Play();
+    }
+
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
             Debug.Log("Dust Bunny caught the player!");
-            other.gameObject.GetComponent<PlayerMovement>().LoseLife();
+
+            PlayerMovement pm = other.gameObject.GetComponent<PlayerMovement>();
+            if (pm != null)
+                pm.LoseLife();
         }
     }
 }
