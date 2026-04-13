@@ -123,6 +123,14 @@ public class DustBunny : MonoBehaviour
     {
         if (ballPrefab == null || firePoint == null) return;
 
+        Vector3 newPos = Vector3.MoveTowards(
+            transform.position,
+            player.position,
+            speed * Time.fixedDeltaTime
+        );
+
+        rb.MovePosition(newPos);
+
         firePoint.LookAt(player);
 
         GameObject bullet = Instantiate(ballPrefab, firePoint.position, firePoint.rotation);

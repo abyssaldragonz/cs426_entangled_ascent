@@ -165,9 +165,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DustBunny
   speed: 7
-  stoppingDistance: 5
-  visionRange: 20
-  wanderRadius: 5
+  stoppingDistance: 3
+  visionRange: 25
+  wanderRadius: 20
   wanderInterval: 3
   ballPrefab: {fileID: 1068730664732161586, guid: 30db01791953e7b489dc4c093c5d2cab, type: 3}
   firePoint: {fileID: 6937815987987299740}
@@ -182,7 +182,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5107809840722290030}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55dc9499bb76b734bb0303d22a171043, type: 3}
   m_Name: 
