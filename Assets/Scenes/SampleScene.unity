@@ -3378,7 +3378,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0.67
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3408,7 +3408,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.995
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -3901,7 +3901,6 @@ GameObject:
   m_Component:
   - component: {fileID: 328438640}
   - component: {fileID: 328438639}
-  - component: {fileID: 328438638}
   m_Layer: 0
   m_Name: Background Music
   m_TagString: Untagged
@@ -3909,18 +3908,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &328438638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328438637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b70d171f55cd2f645a3d950b56b6a219, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!82 &328438639
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3932,15 +3919,15 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: ecac2c01cd690524ea8588d322052de6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.78
-  m_Pitch: 1
+  m_Volume: 0.029
+  m_Pitch: 0.99
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 66
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
