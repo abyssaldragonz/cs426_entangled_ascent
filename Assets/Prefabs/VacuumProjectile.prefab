@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 744b6195e41ac1f4598fccafb9866133, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VacuumProjectile
+  lifetime: 15
 --- !u!1 &5047675500032980994
 GameObject:
   m_ObjectHideFlags: 0

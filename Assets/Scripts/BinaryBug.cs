@@ -20,7 +20,9 @@ public class BinaryBug: MonoBehaviour
     [Header("Patrol Settings")]
 
     [Header("Combat Settings")]
-    
+    [SerializeField] private float damageCooldown = 1.5f;
+    private bool canDealDamage = true;
+
     [Header("Detection Ranges")]
     [SerializeField] private float visionRange = 20f;
     [SerializeField] private float engagementRange = 5f;
@@ -34,8 +36,11 @@ public class BinaryBug: MonoBehaviour
     public List<Vector3> playerPositions = new List<Vector3>();
     private Rigidbody rb;
 
-    // ANIMATIONS
+    // ANIMATIONS AND SOUND
     private Animator anim;
+    public AudioSource audioSource;
+    public AudioClip idleClip;
+    public AudioClip attackClip;
  
     private void Awake()
     {
@@ -126,7 +131,6 @@ public class BinaryBug: MonoBehaviour
             }
             PerformChase(3f);
         }
-
         else if (isPlayerVisible && !isPlayerInRange)
         {
             anim.ResetTrigger("AttackMode"); // no longer in attack animation
@@ -134,10 +138,11 @@ public class BinaryBug: MonoBehaviour
             PerformChase(5f); // and chase
         }
 
-        else if (isPlayerInRange)
+        else if (isPlayerInRange) // do attack
         {
             anim.SetTrigger("AttackMode");
             PerformChase(5f);
+            audioSource.PlayOneShot(attackClip);
         }
 
         // bug sees player so it marked the scent of player
@@ -147,13 +152,27 @@ public class BinaryBug: MonoBehaviour
         }
     }
 
-       
-    private void OnCollisionEnter(Collision other) {
-        if (other.gameObject.tag == "Player") {
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Player") && canDealDamage)
+        {
             Debug.Log("Binary Bug hit the player!");
-            other.gameObject.GetComponent<PlayerMovement>().LoseLife();
+
+            PlayerMovement player = other.gameObject.GetComponent<PlayerMovement>();
+            if (player != null)
+            {
+                player.LoseLife();
+            }
 
             anim.SetTrigger("AttackMode");
+            StartCoroutine(DamageCooldownRoutine());
         }
     }
-}   
+
+    private IEnumerator DamageCooldownRoutine()
+    {
+        canDealDamage = false;
+        yield return new WaitForSeconds(damageCooldown);
+        canDealDamage = true;
+    }
+}

@@ -16,7 +16,7 @@ public class VacuumSentry : MonoBehaviour
     [SerializeField] private GameObject projectilePrefab;
 
     [Header("Detection")]
-    [SerializeField] private float visionRange = 30;
+    [SerializeField] private float visionRange = 30f;
     [SerializeField] private LayerMask playerLayerMask;
 
     [Header("Attack")]
@@ -27,17 +27,8 @@ public class VacuumSentry : MonoBehaviour
     private bool playerDetected = false;
     private bool isCoolingDown = false;
 
-    private void Awake()
-    {
-        if (playerTransform == null)
-        {
-            GameObject playerObj = GameObject.FindGameObjectWithTag("Player");
-            if (playerObj != null)
-            {
-                playerTransform = playerObj.transform;
-            }
-        }
-    }
+    public AudioSource audioSource;
+    public AudioClip attackClip;
 
     private void Update()
     {
@@ -47,11 +38,20 @@ public class VacuumSentry : MonoBehaviour
 
     private void DetectPlayer()
     {
-        playerDetected = Physics.CheckSphere(
-            transform.position,
-            visionRange,
-            playerLayerMask
-        );
+        Collider[] hits = Physics.OverlapSphere(transform.position, visionRange, playerLayerMask);
+
+        if (hits.Length > 0)
+        {
+            playerDetected = true;
+
+            // Use root in case the player's collider is on a child object
+            playerTransform = hits[0].transform.root;
+        }
+        else
+        {
+            playerDetected = false;
+            playerTransform = null;
+        }
     }
 
     private void UpdateState()
@@ -86,30 +86,57 @@ public class VacuumSentry : MonoBehaviour
 
     private void AttackPlayer()
     {
+        if (audioSource != null && attackClip != null)
+        {
+            audioSource.PlayOneShot(attackClip);
+        }
+
         if (projectilePrefab == null || firePoint == null || playerTransform == null)
             return;
 
-        Vector3 lookTarget = new Vector3(
-            playerTransform.position.x,
-            transform.position.y,
-            playerTransform.position.z
-        );
-        transform.LookAt(lookTarget);
-        firePoint.LookAt(lookTarget);
+        // Aim at the player's actual position
+        Vector3 targetPoint = playerTransform.position;
+
+        // Rotate the sentry body only left/right
+        Vector3 bodyDirection = targetPoint - transform.position;
+        bodyDirection.y = 0f;
+
+        if (bodyDirection != Vector3.zero)
+        {
+            transform.rotation = Quaternion.LookRotation(bodyDirection);
+        }
+
+        // Rotate fire point fully toward player, including up/down
+        Vector3 shotDirection = (targetPoint - firePoint.position).normalized;
+        if (shotDirection != Vector3.zero)
+        {
+            firePoint.rotation = Quaternion.LookRotation(shotDirection);
+        }
 
         GameObject projectile = Instantiate(
             projectilePrefab,
             firePoint.position,
-            Quaternion.identity
+            firePoint.rotation
         );
+
+        Collider projectileCol = projectile.GetComponent<Collider>();
+        Collider[] sentryCols = GetComponentsInChildren<Collider>();
+
+        if (projectileCol != null)
+        {
+            foreach (Collider sentryCol in sentryCols)
+            {
+                Physics.IgnoreCollision(projectileCol, sentryCol);
+            }
+        }
 
         Rigidbody projRB = projectile.GetComponent<Rigidbody>();
         if (projRB != null)
         {
-            Vector3 direction = lookTarget.normalized;
-            projRB.linearVelocity = direction * projectileSpeed;
+            projRB.linearVelocity = shotDirection * projectileSpeed;
         }
-        Destroy(projRB, 3f);
+
+        Destroy(projectile, 3f);
     }
 
     private IEnumerator CooldownRoutine()
