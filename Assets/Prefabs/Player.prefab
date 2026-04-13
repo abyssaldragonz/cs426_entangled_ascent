@@ -229,6 +229,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   audioListener: {fileID: 3402783808143687315}
+  energyOrbClip: {fileID: 0}
   playerCamera: {fileID: 7259452503569146450}
   particles: {fileID: 0}
   livesPanel: {fileID: 0}
@@ -494,7 +495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineDeoccluder
   CollideAgainst:
     serializedVersion: 2
-    m_Bits: 119
+    m_Bits: 127
   IgnoreTag: 
   TransparentLayers:
     serializedVersion: 2

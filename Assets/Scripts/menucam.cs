@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-public class menucam : MonoBehaviour
+public class MenuCam : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GameScene");
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

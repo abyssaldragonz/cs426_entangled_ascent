@@ -134,7 +134,8 @@ public class DustBunny : MonoBehaviour
             rbBullet.linearVelocity = Vector3.zero;
             rbBullet.AddForce(firePoint.forward * 10f, ForceMode.Impulse);
         }
- if (shootAudio != null)
+    
+    if (shootAudio != null)
     {
         shootAudio.pitch = Random.Range(0.95f, 1.05f);
         shootAudio.Play();
@@ -142,7 +143,7 @@ public class DustBunny : MonoBehaviour
         Destroy(bullet, 3f);
     }
 
-    // 🔊 Animation Event Function
+    // Animation Event Function
     public void PlayFootstep()
     {
         if (footstepAudio == null) return;
