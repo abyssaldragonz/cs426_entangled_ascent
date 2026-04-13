@@ -27278,6 +27278,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1646667760}
     - target: {fileID: 8312976374964883099, guid: d4951fbb979f0584aabdbaaf94f633eb, type: 3}
+      propertyPath: energyOrbClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f38135dc4d5eeca4fab15f8120f65e41, type: 3}
+    - target: {fileID: 8312976374964883099, guid: d4951fbb979f0584aabdbaaf94f633eb, type: 3}
       propertyPath: restartScreen
       value: 
       objectReference: {fileID: 875709243}

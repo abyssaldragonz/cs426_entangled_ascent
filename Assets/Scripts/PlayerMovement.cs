@@ -11,6 +11,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private AudioListener audioListener;
+    [SerializeField] private AudioClip energyOrbClip;
     [SerializeField] private CinemachineCamera playerCamera;
     [SerializeField] private GameObject particles;
     [SerializeField] private RectTransform livesPanel;
@@ -190,6 +191,7 @@ public class PlayerMovement : MonoBehaviour
         {
             tunnelPanel.gameObject.SetActive(true);
             hasEnergy = true;
+            GetComponent<AudioSource>().PlayOneShot(energyOrbClip);
             Debug.Log("Energy Orb collected!");
         }
     }
