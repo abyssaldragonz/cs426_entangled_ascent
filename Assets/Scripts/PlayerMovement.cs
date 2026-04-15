@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
     
 
     // Lives and game state tracking
-    private RectTransform damageOverlay; 
+    [SerializeField] private RectTransform damageOverlay; 
     private int catLives = 9;
     private bool isGrounded;
     private bool hasEnergy;

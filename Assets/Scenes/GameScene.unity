@@ -12135,7 +12135,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &897650255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12168,7 +12168,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 0.5686275}
+  m_Color: {r: 1, g: 0, b: 0, a: 0.49019608}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -26164,6 +26164,10 @@ PrefabInstance:
       propertyPath: tunnelPanel
       value: 
       objectReference: {fileID: 1646667760}
+    - target: {fileID: 8312976374964883099, guid: d4951fbb979f0584aabdbaaf94f633eb, type: 3}
+      propertyPath: damageOverlay
+      value: 
+      objectReference: {fileID: 897650255}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
