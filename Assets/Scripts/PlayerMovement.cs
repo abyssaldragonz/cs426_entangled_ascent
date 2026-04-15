@@ -10,8 +10,11 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private AudioListener audioListener;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip runningClip;
+    [SerializeField] private AudioClip jumpClip;
     [SerializeField] private AudioClip energyOrbClip;
+    [SerializeField] private AudioClip phasingClip;
     [SerializeField] private CinemachineCamera playerCamera;
     [SerializeField] private GameObject particles;
     [SerializeField] private RectTransform livesPanel;
@@ -33,14 +36,15 @@ public class PlayerMovement : MonoBehaviour
     
 
     // Lives and game state tracking
+    private RectTransform damageOverlay; 
     private int catLives = 9;
     private bool isGrounded;
     private bool hasEnergy;
-    [SerializeField] private AudioClip loseClip;
+    [SerializeField] private AudioClip hurtClip;
     private Animator anim;
     
-    private const float force = 10f;
-    private const float speed = 15f;
+    private const float force = 15f;
+    private const float speed = 25f;
 
     void Start()
     {
@@ -70,10 +74,14 @@ public class PlayerMovement : MonoBehaviour
             Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D));
 
         // reset walking animations
-        if (Keyboard.current == null)
+        if (Keyboard.current == null) {
             anim.ResetTrigger("walking");
+            audioSource.Stop();
+        }
             
         if (Keyboard.current != null) {
+            audioSource.Play();
+            
             // ========== Key Movements ======================================
             Vector3 moveDir = Vector3.zero;
 
@@ -102,6 +110,7 @@ public class PlayerMovement : MonoBehaviour
             if (isGrounded && Keyboard.current.spaceKey.wasPressedThisFrame)
             {
                 rb.AddForce(Vector3.up * force, ForceMode.Impulse);
+                audioSource.PlayOneShot(jumpClip);
                 Debug.Log("Jump!");
             }
             // ===============================================================
@@ -110,6 +119,8 @@ public class PlayerMovement : MonoBehaviour
             // ========== PHASING THROUGH THE FORCE FIELDS ===================
             else if (Keyboard.current.qKey.wasPressedThisFrame && hasEnergy)
             {
+                audioSource.PlayOneShot(phasingClip);
+
                 var closestObj = findClosestEnergy();
 
                 if (!closestObj) // is null
@@ -168,8 +179,15 @@ public class PlayerMovement : MonoBehaviour
     // ========== FUNCTION FOR LOSING LIFE ===============================
     public void LoseLife()
     {
+        audioSource.PlayOneShot(hurtClip);
+
+        // damage overlay
+        StartCoroutine(DoDamageTick());
+        
+
         catLives--;
-        // livesPanel.text = "Lives Left: " + catLives;
+        TextMeshProUGUI textBox = livesPanel.GetComponentInChildren<TextMeshProUGUI>();
+        textBox.text = "Lives Left: " + catLives;
         
         // remove from panel
         Destroy(livesPanel.GetChild(1).gameObject);
@@ -177,7 +195,6 @@ public class PlayerMovement : MonoBehaviour
         // check if zero
         if (catLives == 0)
         {
-            GetComponent<AudioSource>().PlayOneShot(loseClip);
             // show restart menu
             SceneManager.LoadScene("RestartScene");
             return;
@@ -191,7 +208,7 @@ public class PlayerMovement : MonoBehaviour
         {
             tunnelPanel.gameObject.SetActive(true);
             hasEnergy = true;
-            GetComponent<AudioSource>().PlayOneShot(energyOrbClip);
+            audioSource.PlayOneShot(energyOrbClip);
             Debug.Log("Energy Orb collected!");
         }
     }
@@ -213,9 +230,19 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // ========== COROUTINE CODE =========================================
+    IEnumerator DoDamageTick()
+    {
+        damageOverlay.gameObject.SetActive(true); 
+        // Debug.Log("Coroutine started at: " + Time.time);
+        
+        yield return new WaitForSeconds(0.5f);
+        
+        damageOverlay.gameObject.SetActive(false); 
+        // Debug.Log("Coroutine finished at: " + Time.time);
+    }
+
     IEnumerator RemoveField(GameObject energyField)
     {
-        // remove the force field that is closest to player
         energyField.SetActive(false); 
         // Debug.Log("Coroutine started at: " + Time.time);
         
