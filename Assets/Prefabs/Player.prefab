@@ -239,8 +239,8 @@ MonoBehaviour:
   livesPanel: {fileID: 0}
   item_icon: {fileID: 2654028033891903207, guid: b3ef22ba4eb1aac4f94e8b5328344b18, type: 3}
   tunnelPanel: {fileID: 0}
+  damageOverlay: {fileID: 0}
   hurtClip: {fileID: 8300000, guid: ed4ad76ee227abb4ca4e91a7448c0c54, type: 3}
-  loseClip: {fileID: 8300000, guid: d74b299dd0b968a499ac69599bcce49d, type: 3}
 --- !u!54 &3250886251856771075
 Rigidbody:
   m_ObjectHideFlags: 0
