@@ -5,13 +5,15 @@ public class DustBallDmg : MonoBehaviour
 {
     public float speed = 15f;
     public float lifetime = 5f;  // Destroy after 5 seconds
+    [SerializeField] private float verticalShotForce = 15f;
 
     private Rigidbody rb;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.linearVelocity = transform.forward * -speed;
+        rb.linearVelocity = transform.forward * speed;
+        rb.AddForce(transform.up * verticalShotForce);
         Destroy(gameObject, lifetime);
     }
 

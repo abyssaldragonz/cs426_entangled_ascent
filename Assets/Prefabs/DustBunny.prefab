@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 856449857586041741}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.045, y: 0, z: 0.664}
+  m_LocalPosition: {x: -0.045, y: 0, z: 0.791}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -159,12 +159,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5107809840722290030}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e342d20b7454dd043add762dda06e206, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DustBunny
-  speed: 7
+  speed: 15
   stoppingDistance: 3
   visionRange: 25
   wanderRadius: 20
@@ -182,14 +182,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5107809840722290030}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 55dc9499bb76b734bb0303d22a171043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HostileAI
   navAgent: {fileID: 2650734185284828994}
   playerTransform: {fileID: 1205676890882672, guid: d4951fbb979f0584aabdbaaf94f633eb, type: 3}
-  firePoint: {fileID: 6937815987987299740}
+  firepoint: {fileID: 6937815987987299740}
   projectilePrefab: {fileID: 1068730664732161586, guid: 30db01791953e7b489dc4c093c5d2cab, type: 3}
   terrainLayer:
     serializedVersion: 2
@@ -197,12 +197,13 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  patrolRadius: 10
+  patrolRadius: 15
+  speed: 5
   attackCooldown: 1
-  forwardShotForce: 10
-  verticalShotForce: 5
-  visionRange: 30
-  engagementRange: 10
+  forwardShotForce: 30
+  verticalShotForce: 15
+  visionRange: 45
+  engagementRange: 15
   jumpForce: 10
   hopInterval: 2
   audioSource: {fileID: 4787498774480649108}
@@ -217,7 +218,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -225,7 +226,7 @@ NavMeshAgent:
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
-  m_Height: 1
+  m_Height: 0.75
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

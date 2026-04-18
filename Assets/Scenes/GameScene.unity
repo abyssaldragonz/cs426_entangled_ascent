@@ -22708,7 +22708,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 95
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -26106,7 +26106,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1205676890882672, guid: d4951fbb979f0584aabdbaaf94f633eb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20.8
+      value: 22.9
       objectReference: {fileID: 0}
     - target: {fileID: 1205676890882672, guid: d4951fbb979f0584aabdbaaf94f633eb, type: 3}
       propertyPath: m_LocalPosition.z
@@ -26148,6 +26148,10 @@ PrefabInstance:
       propertyPath: item_icon
       value: 
       objectReference: {fileID: 2654028033891903207, guid: b3ef22ba4eb1aac4f94e8b5328344b18, type: 3}
+    - target: {fileID: 8312976374964883099, guid: d4951fbb979f0584aabdbaaf94f633eb, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8312976374964883099, guid: d4951fbb979f0584aabdbaaf94f633eb, type: 3}
       propertyPath: livesPanel
       value: 

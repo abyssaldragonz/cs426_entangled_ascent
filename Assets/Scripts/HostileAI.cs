@@ -10,7 +10,7 @@ public class HostileAI : MonoBehaviour
     [Header("References")]
     [SerializeField] private NavMeshAgent navAgent;
     [SerializeField] private Transform playerTransform;
-    [SerializeField] private Transform firePoint;
+    [SerializeField] private Transform firepoint;
     [SerializeField] private GameObject projectilePrefab;
 
     [Header ("Layers")]
@@ -23,10 +23,11 @@ public class HostileAI : MonoBehaviour
     private bool haspatrolPoint;
 
     [Header("Combat Settings")]
+    [SerializeField] public float speed = 5f;
     [SerializeField] private float attackCooldown=1f;
     private bool isOnAttackCooldown;
-    [SerializeField] private float forwardShotForce = 10f;
-    [SerializeField] private float verticalShotForce = 5f;
+    [SerializeField] private float forwardShotForce = 30f;
+    [SerializeField] private float verticalShotForce = 15f;
 
     [Header("Detection Ranges")]
     [SerializeField] private float visionRange = 20f;
@@ -43,7 +44,7 @@ public class HostileAI : MonoBehaviour
     public AudioClip attackClip;
     private void Awake()
     {
-
+        // Debug.Log("Starting Dustbunny");
         if(playerTransform == null)
         {
             GameObject playerObj = GameObject.Find("Player");
@@ -56,6 +57,7 @@ public class HostileAI : MonoBehaviour
         if (navAgent == null)
         {
             navAgent = GetComponent<NavMeshAgent>();
+            navAgent.speed = 10f; 
         }
     }  
     private void Update()
@@ -71,9 +73,7 @@ public class HostileAI : MonoBehaviour
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, engagementRange);
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, visionRange);
-
-      
+        Gizmos.DrawWireSphere(transform.position, visionRange);      
     }
 
     private void DetectPlayer()
@@ -87,12 +87,23 @@ public class HostileAI : MonoBehaviour
 
     private void FireProjectile()
     {
-        if (projectilePrefab == null || firePoint == null) return;
+        Debug.Log("bunny fires!");
+        if (projectilePrefab == null || firepoint == null) return;
         
-        // Instantiate projectile and apply f
-        Rigidbody projectileRb = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity).GetComponent<Rigidbody>();
-        projectileRb.AddForce(transform.forward * forwardShotForce, ForceMode.Impulse);
-        projectileRb.AddForce(transform.up * verticalShotForce, ForceMode.Impulse);
+        // Aim at the player's actual position
+        Vector3 targetPoint = playerTransform.position;
+
+        // Rotate fire point fully toward player, including up/down
+        Vector3 shotDirection = (targetPoint - firepoint.position).normalized;
+        if (shotDirection != Vector3.zero)
+        {
+            firepoint.rotation = Quaternion.LookRotation(shotDirection);
+        }
+
+        // Instantiate projectile and apply force
+        Rigidbody projectileRb = Instantiate(projectilePrefab, firepoint.position, firepoint.rotation).GetComponent<Rigidbody>();
+        projectileRb.AddForce(transform.forward * forwardShotForce);
+        projectileRb.AddForce(transform.up * verticalShotForce);
 
         Destroy(projectileRb.gameObject, 3f);
     }
@@ -122,11 +133,21 @@ public class HostileAI : MonoBehaviour
     {
         if (!haspatrolPoint) FindPatrolPoint();
 
-        if (haspatrolPoint)
-            navAgent.SetDestination(currentPatrolPoint);
+        // move to patrol point
+        if (haspatrolPoint) {
+            // Debug.Log("bunny patrols ");
+            // Debug.Log(currentPatrolPoint);
+            // navAgent.SetDestination(currentPatrolPoint);
+            float step =  speed * Time.deltaTime; 
+            transform.position = Vector3.MoveTowards(transform.position, currentPatrolPoint, step);
+        }
 
+        // if reached patrol point
         if (Vector3.Distance(transform.position, currentPatrolPoint) < 1f)
+        {    
             haspatrolPoint = false;
+            FindPatrolPoint(); // generate a new one
+        }
     
     }
     IEnumerator HopRoutine()
@@ -142,8 +163,7 @@ public class HostileAI : MonoBehaviour
     IEnumerator PerformPatrolRoutine() {
         while (true) 
         {
-            
-        HopRoutine();    
+            HopRoutine();    
         }
     }
 
@@ -151,13 +171,25 @@ public class HostileAI : MonoBehaviour
 
     private void PerformChase()
     {
-        if(playerTransform != null)
-            navAgent.SetDestination(playerTransform.position);
+        if(playerTransform != null) {
+            // navAgent.SetDestination(playerTransform.position);
+            float step =  speed * Time.deltaTime; 
+            transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, step);
+            GameObject playerObj = GameObject.FindWithTag("Player");
+            playerTransform = playerObj.transform;
+            transform.LookAt(playerTransform);
+        }
+    // Debug.Log("bunny chases");
+    // Debug.Log(playerTransform.position);
     }
 
     private void PerformAttack()
     {
-        navAgent.SetDestination(transform.position);
+        float step =  speed * Time.deltaTime; 
+        transform.position = Vector3.MoveTowards(transform.position, playerTransform.position, step);
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        playerTransform = playerObj.transform;
+        transform.LookAt(playerTransform);
 
         if(playerTransform != null)
         {
