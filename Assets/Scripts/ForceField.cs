@@ -2,16 +2,22 @@ using UnityEngine;
 
 public class ForceField : MonoBehaviour
 {
+    [SerializeField] Material startMat;
+    [SerializeField] Material phaseMat;
+
+    private MeshRenderer rend;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        rend = GetComponent<MeshRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
     }
+
     private void OnCollisionEnter(Collision other) {
         if (other.gameObject.tag == "Player") {
             Debug.Log("Force Field: collision with player detected");
@@ -24,6 +30,18 @@ public class ForceField : MonoBehaviour
             // direction = Vector3.Reflect(playerRB.linearVelocity, other.contacts[0].normal);
         // gameObject.GetComponent<Rigidbody>().AddForce(direction * 5000, ForceMode.Impulse);
         // Debug.Log($"Direction! " + direction);
+        }
+    }
+
+    public void changeMaterial(bool active)
+    {
+        if (rend && active)
+        {
+            rend.material = startMat;
+        }
+        else if (rend && !active)
+        {
+            rend.material = phaseMat;
         }
     }
 }
