@@ -64,7 +64,8 @@ public class PlayerMovement : MonoBehaviour
             GameObject newItem = Instantiate(item_icon, livesPanel);
             // newItem.transform.SetParent(livesPanel, true);
         }
-
+        
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         Debug.Log("STARTING PLAYER.");
     }
 
@@ -139,7 +140,6 @@ public class PlayerMovement : MonoBehaviour
         
         
         // ========== Camera Rotation ====================================
-        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         pitch += 5f * Input.GetAxis("Mouse X");
         yaw -= 5f * Input.GetAxis("Mouse Y");
          if (yaw < -15)
