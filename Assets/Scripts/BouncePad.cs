@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class BouncePad : MonoBehaviour
 {
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip bounceClip;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -20,6 +22,9 @@ public class BouncePad : MonoBehaviour
             direction.Normalize();
             otherRB.linearVelocity = new Vector3(otherRB.linearVelocity.x, 0, otherRB.linearVelocity.z);
             otherRB.AddForce(Vector3.up * 20f, ForceMode.Impulse);
+
+            // sound effects
+            audioSource.PlayOneShot(bounceClip);
         }
     }
 }

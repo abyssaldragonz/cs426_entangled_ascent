@@ -202,8 +202,8 @@ MonoBehaviour:
   attackCooldown: 1
   forwardShotForce: 30
   verticalShotForce: 15
-  visionRange: 45
-  engagementRange: 15
+  visionRange: 55
+  engagementRange: 20
   jumpForce: 10
   hopInterval: 2
   audioSource: {fileID: 4787498774480649108}

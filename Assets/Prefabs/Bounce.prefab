@@ -127,6 +127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f93f63a260c14d4d8cfe9f3fd22770d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BouncePad
+  audioSource: {fileID: 7847440786725613311}
+  bounceClip: {fileID: 8300000, guid: dd99e996d55968643b3e599ee8f85143, type: 3}
 --- !u!54 &6879407991766912623
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -165,7 +167,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: dd99e996d55968643b3e599ee8f85143, type: 3}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
