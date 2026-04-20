@@ -243,13 +243,17 @@ public class PlayerMovement : MonoBehaviour
 
     IEnumerator RemoveField(GameObject energyField)
     {
-        energyField.SetActive(false); 
+        // energyField.SetActive(false); 
+        energyField.GetComponent<ForceField>().changeMaterial(false);
+        energyField.GetComponent<BoxCollider>().enabled = false;
         // Debug.Log("Coroutine started at: " + Time.time);
         
         yield return new WaitForSeconds(2);
         
         // bring it back
-        energyField.SetActive(true);
+        // energyField.SetActive(true);
+        energyField.GetComponent<ForceField>().changeMaterial(true);
+        energyField.GetComponent<BoxCollider>().enabled = true;
         // Debug.Log("Coroutine finished at: " + Time.time);
     }
 }
