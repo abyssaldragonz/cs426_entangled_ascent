@@ -240,6 +240,7 @@ MonoBehaviour:
   item_icon: {fileID: 2654028033891903207, guid: b3ef22ba4eb1aac4f94e8b5328344b18, type: 3}
   tunnelPanel: {fileID: 0}
   damageOverlay: {fileID: 0}
+  catLives: 9
   hurtClip: {fileID: 8300000, guid: ed4ad76ee227abb4ca4e91a7448c0c54, type: 3}
 --- !u!54 &3250886251856771075
 Rigidbody:
@@ -275,7 +276,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7048861567816042825}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: d183f426f3159ed48ab7593f4f1c31aa, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -420,10 +421,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 3bc0b2baaa7be454da79217f92334fa5, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

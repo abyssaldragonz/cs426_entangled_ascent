@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
 
     // Lives and game state tracking
     [SerializeField] private RectTransform damageOverlay; 
-    private int catLives = 9;
+    public int catLives = 9;
     private bool isGrounded;
     private bool hasEnergy;
     [SerializeField] private AudioClip hurtClip;
@@ -74,6 +74,16 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("walking", 
             Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D));
 
+        if (anim.GetBool("walking"))
+        {
+            audioSource.PlayOneShot(runningClip, 1f);
+            audioSource.Play();
+        }
+        else
+        {
+            audioSource.Stop();
+        }
+
         // reset walking animations
         if (Keyboard.current == null) {
             anim.ResetTrigger("walking");
@@ -81,7 +91,6 @@ public class PlayerMovement : MonoBehaviour
         }
             
         if (Keyboard.current != null) {
-            audioSource.Play();
             
             // ========== Key Movements ======================================
             Vector3 moveDir = Vector3.zero;
@@ -163,7 +172,8 @@ public class PlayerMovement : MonoBehaviour
         GameObject nearest = null;
         foreach(var go in arr)
         {
-            var d = (go.transform.position - pos).sqrMagnitude; 
+            Transform detect_point = go.transform.GetChild(0);
+            var d = (detect_point.position - pos).sqrMagnitude; 
             // Debug.Log($"Field detected at " + d);
             if (d < dist)
             {
@@ -228,7 +238,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(coll.gameObject.tag == "Floor" || coll.gameObject.tag == "Bouncy")
         {
-            isGrounded = true;
+            if (coll.contacts[0].normal.y == 1)
+                isGrounded = true;
         }
     }
 

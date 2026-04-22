@@ -11,14 +11,20 @@ public class Heart : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        playerTransform = playerObj.transform;
+        transform.LookAt(playerTransform);
         transform.LookAt(playerTransform);
     }
 
-    private void OnCollisionEnter(Collision other) {
+    private void OnTriggerEnter(Collider other) {
         if (other.gameObject.tag == "Player") {
             var player = other.gameObject.GetComponent<PlayerMovement>();
-            player.GainLife();
-            Destroy(gameObject);
+            if (player.catLives < 9) { 
+                player.GainLife();
+                Destroy(gameObject);
+            }
+
         }
     }
 }
