@@ -103,7 +103,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   attackCooldown: 2
-  projectileSpeed: 12
+  projectileSpeed: 30
   audioSource: {fileID: -2587577116005114097}
   attackClip: {fileID: 8300000, guid: f268a4fd8fee6304a95bc07ebbb0f705, type: 3}
 --- !u!82 &-2587577116005114097
