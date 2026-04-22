@@ -159,7 +159,7 @@ public class PlayerMovement : MonoBehaviour
         var arr = GameObject.FindGameObjectsWithTag("Tunnelable_Wall");
         var pos = transform.position;
 
-        float dist = 1500;
+        float dist = 1750;
         GameObject nearest = null;
         foreach(var go in arr)
         {
@@ -198,6 +198,17 @@ public class PlayerMovement : MonoBehaviour
             // show restart menu
             SceneManager.LoadScene("RestartScene");
             return;
+        }
+    }
+
+    public void GainLife()
+    {
+        if (catLives < 9)
+        {
+            catLives++;
+            TextMeshProUGUI textBox = livesPanel.GetComponentInChildren<TextMeshProUGUI>();
+            textBox.text = "Lives Left: " + catLives;
+            Instantiate(item_icon, livesPanel);
         }
     }
 

@@ -21,7 +21,7 @@ public class BouncePad : MonoBehaviour
             Vector3 direction = transform.position - other.transform.position;
             direction.Normalize();
             otherRB.linearVelocity = new Vector3(otherRB.linearVelocity.x, 0, otherRB.linearVelocity.z);
-            otherRB.AddForce(Vector3.up * 20f, ForceMode.Impulse);
+            otherRB.AddForce(Vector3.up * 25f, ForceMode.Impulse);
 
             // sound effects
             audioSource.PlayOneShot(bounceClip);
