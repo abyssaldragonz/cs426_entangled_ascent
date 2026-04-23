@@ -197,13 +197,13 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  patrolRadius: 15
-  speed: 5
+  patrolRadius: 25
+  speed: 10
   attackCooldown: 1
   forwardShotForce: 30
   verticalShotForce: 15
-  visionRange: 55
-  engagementRange: 20
+  visionRange: 75
+  engagementRange: 30
   jumpForce: 10
   hopInterval: 2
   audioSource: {fileID: 4787498774480649108}

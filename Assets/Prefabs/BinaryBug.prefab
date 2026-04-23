@@ -54,9 +54,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   damageCooldown: 1.5
-  visionRange: 15
+  visionRange: 25
   engagementRange: 5
-  speed: 5
+  speed: 7
   playerPositions: []
   audioSource: {fileID: 7086196936721753000}
   idleClip: {fileID: 8300000, guid: ec62b0b6ab3017245b103f47f5a71a47, type: 3}

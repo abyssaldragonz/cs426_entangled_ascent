@@ -41,6 +41,7 @@ public class PlayerMovement : MonoBehaviour
     private bool isGrounded;
     private bool hasEnergy;
     [SerializeField] private AudioClip hurtClip;
+    [SerializeField] private AudioClip lifeClip;
     private Animator anim;
     
     private const float force = 15f;
@@ -74,9 +75,9 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("walking", 
             Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D));
 
-        if (anim.GetBool("walking"))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
         {
-            audioSource.PlayOneShot(runningClip, 1f);
+            // audioSource.PlayOneShot(runningClip, 1f);
             audioSource.Play();
         }
         else
@@ -219,6 +220,7 @@ public class PlayerMovement : MonoBehaviour
             TextMeshProUGUI textBox = livesPanel.GetComponentInChildren<TextMeshProUGUI>();
             textBox.text = "Lives Left: " + catLives;
             Instantiate(item_icon, livesPanel);
+            audioSource.PlayOneShot(lifeClip);
         }
     }
 
@@ -227,9 +229,10 @@ public class PlayerMovement : MonoBehaviour
     {
         if (other.gameObject.tag == "EnergyOrb")
         {
+            if (!hasEnergy)
+                audioSource.PlayOneShot(energyOrbClip);
             tunnelPanel.gameObject.SetActive(true);
             hasEnergy = true;
-            audioSource.PlayOneShot(energyOrbClip);
             Debug.Log("Energy Orb collected!");
         }
     }
