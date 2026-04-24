@@ -241,7 +241,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if(coll.gameObject.tag == "Floor" || coll.gameObject.tag == "Bouncy")
         {
-            if (coll.contacts[0].normal.y == 1)
+            if (coll.contacts[0].normal.y > 0.25f)
                 isGrounded = true;
         }
     }
