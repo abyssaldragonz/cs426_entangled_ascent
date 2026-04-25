@@ -98,12 +98,12 @@ MonoBehaviour:
   playerTransform: {fileID: 1205676890882672, guid: d4951fbb979f0584aabdbaaf94f633eb, type: 3}
   firePoint: {fileID: 4049619256828286746}
   projectilePrefab: {fileID: 3599735473151483593, guid: 2f2859b1d46c3a14197368f207edda47, type: 3}
-  visionRange: 40
+  visionRange: 50
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 128
   attackCooldown: 2
-  projectileSpeed: 12
+  projectileSpeed: 35
   audioSource: {fileID: -2587577116005114097}
   attackClip: {fileID: 8300000, guid: f268a4fd8fee6304a95bc07ebbb0f705, type: 3}
 --- !u!82 &-2587577116005114097

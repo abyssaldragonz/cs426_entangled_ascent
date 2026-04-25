@@ -37,10 +37,11 @@ public class PlayerMovement : MonoBehaviour
 
     // Lives and game state tracking
     [SerializeField] private RectTransform damageOverlay; 
-    private int catLives = 9;
+    public int catLives = 9;
     private bool isGrounded;
     private bool hasEnergy;
     [SerializeField] private AudioClip hurtClip;
+    [SerializeField] private AudioClip lifeClip;
     private Animator anim;
     
     private const float force = 15f;
@@ -64,7 +65,8 @@ public class PlayerMovement : MonoBehaviour
             GameObject newItem = Instantiate(item_icon, livesPanel);
             // newItem.transform.SetParent(livesPanel, true);
         }
-
+        
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         Debug.Log("STARTING PLAYER.");
     }
 
@@ -73,14 +75,23 @@ public class PlayerMovement : MonoBehaviour
         anim.SetBool("walking", 
             Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.D));
 
+        // if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        // {
+            // audioSource.PlayOneShot(runningClip, 1f);
+        //     audioSource.Play();
+        // }
+        // else
+        // {
+        //     audioSource.Stop();
+        // }
+
         // reset walking animations
         if (Keyboard.current == null) {
             anim.ResetTrigger("walking");
-            audioSource.Stop();
+            // audioSource.Stop();
         }
             
         if (Keyboard.current != null) {
-            audioSource.Play();
             
             // ========== Key Movements ======================================
             Vector3 moveDir = Vector3.zero;
@@ -139,7 +150,6 @@ public class PlayerMovement : MonoBehaviour
         
         
         // ========== Camera Rotation ====================================
-        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
         pitch += 5f * Input.GetAxis("Mouse X");
         yaw -= 5f * Input.GetAxis("Mouse Y");
          if (yaw < -15)
@@ -159,11 +169,12 @@ public class PlayerMovement : MonoBehaviour
         var arr = GameObject.FindGameObjectsWithTag("Tunnelable_Wall");
         var pos = transform.position;
 
-        float dist = 1500;
+        float dist = 1750;
         GameObject nearest = null;
         foreach(var go in arr)
         {
-            var d = (go.transform.position - pos).sqrMagnitude; 
+            Transform detect_point = go.transform.GetChild(0);
+            var d = (detect_point.position - pos).sqrMagnitude; 
             // Debug.Log($"Field detected at " + d);
             if (d < dist)
             {
@@ -201,14 +212,27 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    public void GainLife()
+    {
+        if (catLives < 9)
+        {
+            catLives++;
+            TextMeshProUGUI textBox = livesPanel.GetComponentInChildren<TextMeshProUGUI>();
+            textBox.text = "Lives Left: " + catLives;
+            Instantiate(item_icon, livesPanel);
+            audioSource.PlayOneShot(lifeClip);
+        }
+    }
+
     // ========== COLLISION AND TRIGGER DETECTIONS =======================
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "EnergyOrb")
         {
+            if (!hasEnergy)
+                audioSource.PlayOneShot(energyOrbClip);
             tunnelPanel.gameObject.SetActive(true);
             hasEnergy = true;
-            audioSource.PlayOneShot(energyOrbClip);
             Debug.Log("Energy Orb collected!");
         }
     }
@@ -217,7 +241,8 @@ public class PlayerMovement : MonoBehaviour
     {
         if(coll.gameObject.tag == "Floor" || coll.gameObject.tag == "Bouncy")
         {
-            isGrounded = true;
+            if (coll.contacts[0].normal.y > 0.25f)
+                isGrounded = true;
         }
     }
 

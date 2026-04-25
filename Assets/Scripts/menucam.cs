@@ -2,7 +2,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class MenuCam : MonoBehaviour
 {
+    public GameObject controlsPopup;
+
     public void PlayGame()
+    {
+        controlsPopup.SetActive(true);
+    }
+
+    public void StartGame()
     {
         SceneManager.LoadScene("GameScene");
     }

@@ -197,13 +197,13 @@ MonoBehaviour:
   playerLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  patrolRadius: 15
-  speed: 5
+  patrolRadius: 25
+  speed: 10
   attackCooldown: 1
   forwardShotForce: 30
   verticalShotForce: 15
-  visionRange: 55
-  engagementRange: 20
+  visionRange: 75
+  engagementRange: 30
   jumpForce: 10
   hopInterval: 2
   audioSource: {fileID: 4787498774480649108}
@@ -238,7 +238,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5107809840722290030}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -361,7 +361,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5107809840722290030}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
