@@ -142,7 +142,7 @@ public class BinaryBug: MonoBehaviour
         {
             anim.SetTrigger("AttackMode");
             PerformChase(5f);
-            audioSource.PlayOneShot(attackClip, 0.75f);
+            audioSource.PlayOneShot(attackClip, 0.5f);
         }
 
         // bug sees player so it marked the scent of player

@@ -59,7 +59,7 @@ MonoBehaviour:
   speed: 7
   playerPositions: []
   audioSource: {fileID: 7086196936721753000}
-  idleClip: {fileID: 8300000, guid: ec62b0b6ab3017245b103f47f5a71a47, type: 3}
+  idleClip: {fileID: 8300000, guid: 1cf835ab94529b74d93594d26ded0559, type: 3}
   attackClip: {fileID: 8300000, guid: 746bfc1c341ca6d42b78dcd3d7f3656f, type: 3}
 --- !u!54 &1972081238901447627
 Rigidbody:
@@ -120,9 +120,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: ec62b0b6ab3017245b103f47f5a71a47, type: 3}
+  m_Resource: {fileID: 8300000, guid: 1cf835ab94529b74d93594d26ded0559, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.15
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
