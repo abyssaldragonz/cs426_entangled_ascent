@@ -2209,7 +2209,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Sound On
+  m_text: Mute Sound
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2243,7 +2243,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -8943,8 +8943,8 @@ Transform:
   m_GameObject: {fileID: 575210306}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.6833, y: -43.8404, z: 16.6779}
-  m_LocalScale: {x: 67.16764, y: 94.542465, z: 15}
+  m_LocalPosition: {x: 37.6833, y: -45.1112, z: 16.6779}
+  m_LocalScale: {x: 67.16764, y: 92.00268, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 325231184}
@@ -10383,7 +10383,6 @@ GameObject:
   m_Component:
   - component: {fileID: 686422383}
   - component: {fileID: 686422382}
-  - component: {fileID: 686422381}
   - component: {fileID: 686422380}
   - component: {fileID: 686422379}
   m_Layer: 0
@@ -10469,14 +10468,6 @@ MonoBehaviour:
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
   m_Version: 2
---- !u!81 &686422381
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 686422378}
-  m_Enabled: 0
 --- !u!20 &686422382
 Camera:
   m_ObjectHideFlags: 0
@@ -12535,8 +12526,8 @@ Transform:
   m_GameObject: {fileID: 817579558}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 8.8, y: -43.8404, z: 44.7}
-  m_LocalScale: {x: 67.16764, y: 94.542465, z: 15}
+  m_LocalPosition: {x: 8.8, y: -45.1112, z: 44.7}
+  m_LocalScale: {x: 67.16764, y: 92.00268, z: 15}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 325231184}
@@ -16824,7 +16815,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
   pauseMenuUI: {fileID: 1644640119}
-  music: {fileID: 0}
 --- !u!4 &1057291616
 Transform:
   m_ObjectHideFlags: 0
@@ -24283,7 +24273,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1644640120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26424,6 +26414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1801406489}
   - component: {fileID: 1801406490}
+  - component: {fileID: 1801406491}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -26498,9 +26489,9 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 33865747}
-        m_TargetAssemblyTypeName: UnityEngine.AudioListener, UnityEngine
-        m_MethodName: set_enabled
+      - m_Target: {fileID: 1057291615}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: ToggleMute
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -26508,9 +26499,21 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 1
-  m_IsOn: 1
+          m_BoolArgument: 0
+        m_CallState: 2
+  m_IsOn: 0
+--- !u!114 &1801406491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801406488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1950500513eeec04e92f27d091ff990c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MusicControl
 --- !u!1001 &1805647706
 PrefabInstance:
   m_ObjectHideFlags: 0

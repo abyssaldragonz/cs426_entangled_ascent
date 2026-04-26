@@ -4,8 +4,8 @@ using UnityEngine.SceneManagement;
 public class PauseMenu : MonoBehaviour
 {
     public GameObject pauseMenuUI;
-    public AudioSource music;
 
+    public static bool musicMuted = false; 
     public static bool GameIsPaused = false;
 
     void Start()
@@ -14,6 +14,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         AudioListener.pause = false;
         GameIsPaused = false;
+        musicMuted = false;
     }
 
     void Update()
@@ -27,11 +28,18 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
+    public void ToggleMute(bool isMuted)
+    {
+        // AudioListener.pause = isMuted;
+        musicMuted = isMuted;
+    }
+
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        AudioListener.pause = false;
+        if (!musicMuted) // music is not muted 
+            AudioListener.pause = false; // continue music
 
         GameIsPaused = false;
 
@@ -56,6 +64,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         AudioListener.pause = false;
         GameIsPaused = false;
+        musicMuted = false;
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
